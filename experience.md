@@ -7,7 +7,7 @@ permalink: /experience/
 <h1>Professional Experience</h1>
 
 <h2>Data Scientist - GFT Technologies SE</h2>
-<p><strong>November 2024 – Present</strong></p>
+<p><strong>November 2022 – Present</strong></p>
 <ul>
     <li>Led the R&D department’s Fast-Prototyping team, driving innovation and rapid development.</li>
     <li>Designed and developed back-end systems integrating LLMs for document compliance analysis, database navigation, and automated code documentation generation.</li>
@@ -20,7 +20,7 @@ permalink: /experience/
 </ul>
 
 <h2>Software Engineer - GFT Technologies SE</h2>
-<p><strong>May 2020 – November 2024</strong></p>
+<p><strong>May 2020 – November 2022</strong></p>
 <ul>
     <li>Collaborated with European partners on cutting-edge research projects funded by the European Union, applying emerging technologies to innovative domains.</li>
     <li>Contributed to four major projects, including:</li>
