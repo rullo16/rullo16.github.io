@@ -37,5 +37,4 @@ permalink: /experience/
         </li>
         <li><strong>AI Security for Image Recognition:</strong> Researched and implemented techniques to strengthen computer vision systems against adversarial attacks, presenting findings at international conferences, including in Athens.</li>
     </ul>
-    <li>
 
