@@ -1,0 +1,11 @@
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+.profile-section {
+    text-align: center;
+    margin: 30px 0;
+}

@@ -4,99 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - Federico Rullo Portfolio</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            margin: 0.5rem 0;
-            font-size: 1.2rem;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #555;
-            padding: 0.5rem 0;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 1rem;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #f39c12;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
-        }
-        footer p {
-            margin: 0;
-        }
-        footer a {
-            color: #f39c12;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Federico Rullo</h1>
-        <p>Data Scientist | Software Engineer | AI Enthusiast</p>
+    <header class="site-header">
+        <div class="wrapper">
+            <h1 class="site-title">{{ site.title }}</h1>
+            <p class="site-description">{{ site.description }}</p>
+        </div>
     </header>
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="/experience/">Experience</a>
-        <a href="/projects/">Projects</a>
-        <a href="/skills/">Skills</a>
-        <a href="/education/">Education</a>
-        <a href="/picture/">Picture</a>
-        <a href="/contact/">Contact</a>
+    <nav class="site-nav">
+        <div class="wrapper">
+            <ul class="nav-list">
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/experience/' | relative_url }}">Experience</a></li>
+                <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+                <li><a href="{{ '/skills/' | relative_url }}">Skills</a></li>
+                <li><a href="{{ '/education/' | relative_url }}">Education</a></li>
+                <li><a href="{{ '/picture/' | relative_url }}">Picture</a></li>
+                <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div class="container">
-        {{ content }}
+    <div class="content-wrapper">
+        <div class="profile-section">
+            <img src="{{ '/assets/profile-picture.jpg' | relative_url }}" alt="Federico Rullo" class="profile-picture">
+            <h2>Welcome!</h2>
+            <p>
+                Hi! I’m Federico Rullo, a Data Scientist and Software Engineer specializing in AI, LLMs, and Multi-Agent Systems.
+                Feel free to explore my professional journey and projects!
+            </p>
+        </div>
+        <main class="page-content">
+            {{ content }}
+        </main>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Federico Rullo. All rights reserved.</p>
-        <p>
-            <a href="mailto:rullofederico16@gmail.com">Email</a> |
-            <a href="https://github.com/rullo16" target="_blank">GitHub</a> |
-            <a href="https://linkedin.com/in/federico-rullo-683677145" target="_blank">LinkedIn</a>
-        </p>
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>&copy; 2025 Federico Rullo. All rights reserved.</p>
+            <p>
+                <a href="mailto:{{ site.email }}">Email</a> |
+                <a href="https://github.com/rullo16" target="_blank">GitHub</a> |
+                <a href="https://linkedin.com/in/federico-rullo-683677145" target="_blank">LinkedIn</a>
+            </p>
+        </div>
     </footer>
 </body>
 </html>
