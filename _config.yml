@@ -1,12 +1,12 @@
 title: Federico Rullo Portfolio
 email: rullofederico16@gmail.com
-description: >
-  A personal portfolio showcasing my professional experience, projects, and skills.
-author: Federico Rullo
-baseurl: "" # Base URL for GitHub Pages deployment
-url: "https://rullo16.github.io"
+description: Data Scientist, Software Engineer, and AI Enthusiast.
+baseurl: "" # For GitHub Pages
+url: "https://federico-rullo.github.io" # Update with your GitHub Pages URL
 theme: minima
 markdown: kramdown
+permalink: pretty
+paginate: 5
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
