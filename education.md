@@ -9,17 +9,17 @@ permalink: /education/
 <h2>Kyushu University</h2>
 <p><strong>Research Student (2024 – Present)</strong></p>
 <ul>
-    <li>Conducting research on drone taxi systems using Reinforcement Learning and Multi-Agent Systems, creating 3D environments using Unity Engine.</li>
+    <li>Conducting research on drone taxi systems using reinforcement learning and multi-agent systems, developing 3D environments with the Unity Engine.</li>
 </ul>
 
 <h2>University of Bologna</h2>
-<p><strong>MSc Artificial Intelligence</strong></p>
+<p><strong>MSc in Artificial Intelligence</strong></p>
 <ul>
-    <li>Dissertation: *Extending Adversarial MARL in Rescue Missions and Safe-Critic Environments*</li>
+    <li>Dissertation: <em>Extending Adversarial Multi-Agent Reinforcement Learning in Rescue Missions and Safe-Critic Environments</em></li>
 </ul>
 
 <h2>University of Aberdeen</h2>
-<p><strong>BSc Computing Science</strong></p>
+<p><strong>BSc in Computing Science</strong></p>
 <ul>
-    <li>Dissertation: *Norm Emergence in Multi-Agent Systems Using Deep Reinforcement Learning*</li>
+    <li>Dissertation: <em>Norm Emergence in Multi-Agent Systems Using Deep Reinforcement Learning</em></li>
 </ul>
