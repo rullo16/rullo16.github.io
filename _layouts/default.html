@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+
+{% seo %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title | default: site.title }}</title>
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    {% seo %}
+    {% include head-custom.html %}
   </head>
 
   <body>
-    <header>
+    <header class="page-header" role="banner">
       <div class="wrapper">
         <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
         <p>{{ site.description }}</p>
@@ -24,26 +28,22 @@
         <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
         <li><a href="{{ '/skills/' | relative_url }}">Skills</a></li>
         <li><a href="{{ '/education/' | relative_url }}">Education</a></li>
-        <li><a href="{{ '/picture/' | relative_url }}">Picture</a></li>
         <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
       </ul>
     </nav>
 
-    <main>
-      <div class="wrapper">
+    <main id="content" class="main-content" role="main">
         {{ content }}
-      </div>
+  
+        <footer class="site-footer">
+            <p>&copy; 2025 Federico Rullo. All rights reserved.</p>
+            <p>
+            <a href="mailto:{{ site.email }}">Email</a> |
+            <a href="https://github.com/rullo16" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/federico-rullo-683677145" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+        </footer>
     </main>
-
-    <footer>
-      <div class="wrapper">
-        <p>&copy; 2025 Federico Rullo. All rights reserved.</p>
-        <p>
-          <a href="mailto:{{ site.email }}">Email</a> |
-          <a href="https://github.com/rullo16" target="_blank">GitHub</a> |
-          <a href="https://linkedin.com/in/federico-rullo-683677145" target="_blank">LinkedIn</a>
-        </p>
-      </div>
-    </footer>
   </body>
 </html>
