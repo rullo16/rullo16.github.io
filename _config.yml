@@ -3,10 +3,11 @@ email: rullofederico16@gmail.com
 description: Data Scientist, Software Engineer, and AI Enthusiast.
 baseurl: "" # For GitHub Pages
 url: "https://federico-rullo.github.io" # Update with your GitHub Pages URL
-theme: minima
+remote_theme: pages-themes/tactile@v0.2.0
 markdown: kramdown
 permalink: pretty
 paginate: 5
 plugins:
+  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-seo-tag
