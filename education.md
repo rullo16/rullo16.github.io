@@ -9,7 +9,7 @@ permalink: /education/
 <h2>Kyushu University</h2>
 <p><strong>Research Student (2024 – Present)</strong></p>
 <ul>
-    <li>Conducting research on drone taxi systems using Reinforcement Learning and Multi-Agent Systems.</li>
+    <li>Conducting research on drone taxi systems using Reinforcement Learning and Multi-Agent Systems, creating 3D environments using Unity Engine.</li>
 </ul>
 
 <h2>University of Bologna</h2>
