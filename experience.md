@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Experience
+permalink: /experience/
 ---
 
 <h1>Professional Experience</h1>

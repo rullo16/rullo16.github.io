@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Skills
+permalink: /skills/
 ---
 
 <h1>Technical Skills</h1>

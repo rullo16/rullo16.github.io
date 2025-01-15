@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Education
+permalink: /education/
 ---
 
 <h1>Education</h1>
