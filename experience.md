@@ -6,7 +6,7 @@ permalink: /experience/
 
 <h1>Professional Experience</h1>
 
-<h2>Data Scientist - GFT Technologies SE</h2>
+<h2>ML Engineer - GFT Technologies SE</h2>
 <p><strong>November 2022 – Present</strong></p>
 <ul>
     <li>Led the R&D department’s Fast-Prototyping team, driving innovation and rapid development.</li>
