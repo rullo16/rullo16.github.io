@@ -7,7 +7,7 @@ permalink: /projects/
 <h1>Projects</h1>
 
 <h2>Developing a Multi-Task Deep Reinforcement Learning Agent to Solve Optimization and Control Problems</h2>
-<p>Developed a 3D environment inspired by NASA's air highway concept, where drones navigate to designated goals. Applied deep reinforcement learning techniques to address flocking as an optimization and control problem. The environment was built using Unity and the ML-Agents library. Implemented the DeepMind Dreamer model to solve this environment while exploring additional models, such as Distral, for enhanced performance.</p>
+<p>Developed a 3D environment inspired by NASA's air highway concept, where drones navigate to designated goals. Applied deep reinforcement learning techniques to address flocking as an optimization and control problem. The environment was built using Unity and the ML-Agents library. Exploring different Algorithms to solve the environment such as Proximal Policy Optimization, and Soft Actor-Critic both implementing Distillation for the Feature Extraction model. Exploring also advanced Models like Dreamer.</p>
 
 <h2>Extending Adversarial MARL in Rescue Missions and Safe-Critic Environments</h2>
 <p>Extended the AdverSAR framework by creating a dynamic 3D environment in Unity and adapting its algorithm to function effectively in a higher-dimensional space.</p>
