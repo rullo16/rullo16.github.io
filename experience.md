@@ -9,23 +9,21 @@ permalink: /experience/
 <h2>ML Engineer - GFT Technologies SE</h2>
 <p><strong>November 2022 – Present</strong></p>
 <ul>
-    <li>Led the R&D department’s Fast-Prototyping team, driving innovation and rapid development.</li>
-    <li>Designed and developed back-end systems integrating LLMs for document compliance analysis, database navigation, and automated code documentation generation.</li>
-    <li>Implemented solutions using technologies such as Flask, FastAPI, and SQLAlchemy for efficient back-end development.</li>
-    <li>Utilized cloud platforms like GCP and Azure, with containerization tools including Docker and Kubernetes.</li>
-    <li>Conducted ongoing research to enhance LLM integration using NLP techniques and libraries like LLamaIndex for improved accuracy.</li>
-    <li>Collaborated with international partners on large-scale in-house projects, ensuring alignment with strategic goals.</li>
-    <li>Presented technical updates and project progress to internal stakeholders, guiding the team toward optimal solutions.</li>
-    <li>Delivered impactful client presentations, demonstrating the value of the developed solutions and fostering client engagement.</li>
+    <li>Led one of the R&D Fast-Prototyping teams, accelerating AI-driven product development.</li>
+    <li>Designed and deployed back-end system integrating LLMs for document compliance, database navigation, and automation using Flask, FastAPI, and SQLAlchemy.</li>
+    <li>Deployed scalable solutions on GCP and Azure, leveraging Docker and Kubernetes for scalability and efficiency.</li>
+    <li>Enhanced LLM integration through NLP research and tools like LlamaIndex, improving accuracy and performance.</li>
+    <li>Delivered technical presentations to clients and stakeholders, guiding strategic decision making.</li>
+    <li>Collaborated with international teams to align projects with business goals.</li>
 </ul>
 
 <h2>Software Engineer - GFT Technologies SE</h2>
 <p><strong>May 2020 – November 2022</strong></p>
 <ul>
-    <li>Collaborated with European partners on cutting-edge research projects funded by the European Union, applying emerging technologies to innovative domains.</li>
+    <li>Developed innovative solutions for EU-funded research projects.</li>
     <li>Contributed to four major projects, including:</li>
     <ul>
-        <li><strong>Blockchain for Secure Loan Processing:</strong> Developed a web-based application integrating blockchain and smart contracts to secure and streamline loan requests.</li>
+        <li><strong>Blockchain for Secure Loan Processing:</strong> Designed a web-application integrating blockchain technology, improving transaction security and efficiency.</li>
         <li><strong>Kafka Queue Development:</strong> Designed and implemented a Kafka-based queuing system, enhancing system reliability and ensuring project success.</li>
         <li><strong>Pipeline Manager for Data Quality Optimization:</strong>
             <ul>
@@ -35,6 +33,6 @@ permalink: /experience/
                 <li>Managed Docker-based deployments, ensuring seamless project delivery.</li>
             </ul>
         </li>
-        <li><strong>AI Security for Image Recognition:</strong> Researched and implemented techniques to strengthen computer vision systems against adversarial attacks, presenting findings at international conferences, including in Athens.</li>
+        <li><strong>Policy Manager for injection Image recognition attacks:</strong> Researched and implemented methods to implement policies for a policy manager to improve resilience against adversarial attacks.</li>
     </ul>
 
