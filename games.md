@@ -11,10 +11,17 @@ permalink: /games/
       src="https://rullo16.github.io/TopDown/" 
       width="640" 
       height="360" 
-      style="border:none; transform: scale(2); transform-origin: top left;" 
+      style="
+          border: none; 
+          transform: scale(2); 
+          transform-origin: top left;
+          display: block;
+          margin: 0 auto;
+      " 
       allowfullscreen>
   </iframe>
 </div>
+
 
 <p><strong>Controls and gameplay instructions:</strong></p>
 <ul>
