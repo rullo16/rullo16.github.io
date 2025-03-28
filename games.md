@@ -8,23 +8,18 @@ permalink: /games/
 
 
 <div style="
-    max-width: 100%; 
-    overflow: hidden; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3); 
-    margin: 40px auto; 
-    display: flex; 
-    justify-content: center;
+    width: 640px;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    margin: 40px auto;
 ">
   <iframe 
       src="https://rullo16.github.io/TopDown/" 
       width="640" 
       height="360" 
-      style="
-          border:none;
-          transform: scale(2);
-          transform-origin: top left;
-      " 
+      style="border: none;" 
       allowfullscreen>
   </iframe>
 </div>
