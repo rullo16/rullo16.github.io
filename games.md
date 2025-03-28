@@ -6,21 +6,27 @@ permalink: /games/
 
 <h1>Games</h1>
 
-<div style="margin: 40px auto; width: 1280px; height: 720px; overflow: hidden; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+<div style="
+    width:1280px;
+    height:720px;
+    overflow:hidden;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.3);
+    margin:40px auto; /* centers the div horizontally on the page */
+">
   <iframe 
       src="https://rullo16.github.io/TopDown/" 
       width="640" 
       height="360" 
       style="
-          border: none; 
-          transform: scale(2); 
-          transform-origin: top left;
-          display: block;
-          margin: 0 auto;
+          border:none;
+          transform:scale(2);
+          transform-origin:top left;
       " 
       allowfullscreen>
   </iframe>
 </div>
+
 
 
 <p><strong>Controls and gameplay instructions:</strong></p>
