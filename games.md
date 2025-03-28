@@ -9,8 +9,8 @@ permalink: /games/
 <div style="margin-top:20px; margin-bottom:20px;">
   <iframe 
       src="https://rullo16.github.io/TopDown/" 
-      width="640" 
-      height="360" 
+      width="1280" 
+      height="720" 
       style="border:none; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);" 
       allowfullscreen>
   </iframe>
