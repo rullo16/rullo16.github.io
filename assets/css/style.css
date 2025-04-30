@@ -13,12 +13,26 @@
 }
 
 .profile-picture {
-    max-width:100%;
-    height:auto;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+  /* fixed square box */
+  width: 150px;
+  height: 150px;
+
+  /* make it a circle */
+  border-radius: 50%;
+
+  /* crop & center the photo */
+  object-fit: cover;
+  display: block;         /* ensure width/height apply cleanly */
+  overflow: hidden;       /* hide any overflow outside the circle */
+
+  /* float & wrap text around a circle */
+  float: left;
+  margin: 0 15px 15px 0;  /* tweak as needed */
+  shape-outside: circle();
+  clip-path: circle(50% at 50% 50%);
+
+  /* subtle drop-shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .profile-bio {
