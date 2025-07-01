@@ -1,42 +1,69 @@
----
----
-
+/* Import the base theme first */
 @import 'jekyll-theme-cayman';
 
+/*
+ * Profile Section Container
+ * Uses Flexbox for a modern, robust layout.
+ */
 .profile-section {
-    text-align: center;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex; /* -- CHANGE: Use Flexbox instead of float for alignment -- */
+  align-items: center; /* Vertically align items in the middle */
+  gap: 25px; /* Creates consistent space between the picture and the bio */
+  
+  max-width: 800px; /* Constrain width for better readability on large screens */
+  margin: 40px auto; /* More vertical margin for breathing room */
+  padding: 25px;
+  
+  /* -- VISUAL ENHANCEMENT: Softer background and shadow -- */
+  background-color: #f9f9f9; /* Slightly softer than #f7f7f7 */
+  border: 1px solid #e1e1e1; /* Subtle border adds definition */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+/*
+ * Profile Picture Styling
+ */
 .profile-picture {
-  /* fixed square box */
+  /* -- CHANGE: Use flex-shrink to prevent image from distorting -- */
+  flex-shrink: 0;
+  
   width: 150px;
   height: 150px;
-
-  /* make it a circle */
-  border-radius: 50%;
-
-  /* crop & center the photo */
-  object-fit: cover;
-  display: block;         /* ensure width/height apply cleanly */
-  overflow: hidden;       /* hide any overflow outside the circle */
-
-  /* float & wrap text around a circle */
-  float: left;
-  margin: 0 15px 15px 0;  /* tweak as needed */
-  shape-outside: circle();
-  clip-path: circle(50% at 50% 50%);
-
-  /* subtle drop-shadow */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 50%; /* Makes the image a circle */
+  object-fit: cover; /* Crops and centers the photo without stretching */
+  
+  /* -- VISUAL ENHANCEMENT: Clean border and interactive hover effect -- */
+  border: 4px solid #ffffff; /* A clean white border */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* A slightly deeper shadow */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
 }
 
+.profile-picture:hover {
+  transform: scale(1.05); /* Slightly enlarges the picture on hover */
+}
+
+/*
+ * Profile Bio Text
+ */
 .profile-bio {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: left; /* -- CHANGE: Left-align text for better readability -- */
+}
+
+/*
+ * Responsive Design for Mobile Devices
+ * This makes the layout stack vertically on screens smaller than 600px.
+ */
+@media (max-width: 600px) {
+  .profile-section {
+    flex-direction: column; /* Stack image and bio on top of each other */
+    text-align: center; /* Center text on mobile for a clean look */
+  }
+
+  .profile-bio {
+    text-align: center; /* Ensure bio text is also centered on mobile */
+  }
 }
