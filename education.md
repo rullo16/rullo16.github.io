@@ -6,12 +6,6 @@ permalink: /education/
 
 <h1>Education</h1>
 
-<h2>Kyushu University</h2>
-<p><strong>Research Student</strong></p>
-<ul>
-    <li>Conducting research on drone taxi systems using reinforcement learning and multi-agent systems, developing 3D environments with the Unity Engine.</li>
-</ul>
-
 <h2>University of Bologna</h2>
 <p><strong>MSc in Artificial Intelligence</strong></p>
 <ul>
