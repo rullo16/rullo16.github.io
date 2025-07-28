@@ -55,8 +55,8 @@ permalink: /projects/
 <h2>Norm Emergence in Multi-Agent Systems Using Deep Reinforcement Learning</h2>
 <p>Simulated complex road intersection scenarios in Unity using C#. Trained multi-agent systems with Proximal Policy Optimization (PPO) and Soft Actor-Critic (SAC) algorithms to study norm emergence in dynamic environments.</p>
 
-<h2>Adversarial Learning for Fairness in MARL: Mitigating Discrimination in Cooperative Environments</h2>
-<p>Implemented a FAIR-DQN model by incorporating a Fair Adversarial Discriminative framework into the DQN architecture. Integrated elements of the one-network adversarial approach and trained agents in a cooperative environment where one agent faced a deficit in capabilities compared to others, mitigating discrimination and improving fairness.</p>
+<h2>Adversarial Learning for Fairness in MARL</h2>
+[cite_start]<p>Developed and deployed a Python-based multi-agent reinforcement learning (MARL) framework on AWS, utilising PyTorch, NumPy, and Matplotlib to implement a Fair-DQN agent for mitigating bias in a simulated robotic warehouse environment. [cite: 28]</p>
 
-<h2>Art Description & Classification</h2>
-<p>Designed an Art Critic Model capable of analysing paintings to generate critique-like descriptions. Incorporated functionality to utilise generated descriptions for selecting alternative artistic styles and producing new images that embody the chosen styles.</p>
+<h2>Art-Critic</h2>
+[cite_start]<p>Built a vision-language system that analyses paintings to generate critic-style textual descriptions. [cite: 29] [cite_start]The project combined fine-tuned Hugging Face models for caption generation with transfer learning approaches using ResNet and ResNeXt for classification and image captioning. [cite: 30]</p>
