@@ -58,5 +58,5 @@ permalink: /projects/
 <h2>Adversarial Learning for Fairness in MARL</h2>
 <p>Developed and deployed a Python-based multi-agent reinforcement learning (MARL) framework on AWS, utilising PyTorch, NumPy, and Matplotlib to implement a Fair-DQN agent for mitigating bias in a simulated robotic warehouse environment.</p>
 
-<h2>Art-Critic</h2>
-<p>Built a vision-language system that analyses paintings to generate critic-style textual descriptions. [cite: 29] [cite_start]The project combined fine-tuned Hugging Face models for caption generation with transfer learning approaches using ResNet and ResNeXt for classification and image captioning.</p>
+<h2>Multimodal NLP: Art-Critic</h2>
+<p>Built a vision-language system that analyses paintings to generate critic-style textual descriptions. The project combined fine-tuned Hugging Face models for caption generation with transfer learning approaches using ResNet and ResNeXt for classification and image captioning.</p>
