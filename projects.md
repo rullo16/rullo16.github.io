@@ -34,13 +34,13 @@ permalink: /projects/
 </p>
 <ul>
     <li>
-        <strong>Solving Sparse Rewards & Exploration:</strong> The initial sparse reward function led to the agent learning nothing. I engineered a hybrid reward function combining a large terminal reward with a dense, progress-based shaping reward. To escape local optima (e.g., passive or orbiting behavior), I successfully integrated an <strong>Intrinsic Curiosity Motivation (ICM)</strong> module, which created an exploration bonus that encouraged the agent to discover the goal.
+        <strong>Solving Sparse Rewards & Exploration:</strong> The initial sparse reward function led to the agent learning nothing. I engineered a hybrid reward function combining a large terminal reward with a dense, progress-based shaping reward. To escape local optima (e.g., passive or orbiting behaviour), I successfully integrated an <strong>Intrinsic Curiosity Motivation (ICM)</strong> module, which created an exploration bonus that encouraged the agent to discover the goal.
     </li>
     <li>
         <strong>Debugging the Agent-Environment Interface:</strong> A major hurdle was diagnosing why the agent would not move. This involved a systematic process of elimination, moving from the Python API to the Unity C# scripts. The root cause was identified in the drone's physics implementation (a mismatch between the applied velocity and the `Rigidbody`'s drag and settings), which was successfully resolved.
     </li>
     <li>
-        <strong>Ensuring Training Stability:</strong> I systematically diagnosed and resolved multiple training instability issues, including policy collapse and reward hacking. This was achieved through iterative hyperparameter tuning (adjusting `gamma`, `tau`, learning rates), analyzing metrics with <strong>Weights & Biases</strong>, and making precise adjustments to the environment's physics and reward signals.
+        <strong>Ensuring Training Stability:</strong> I systematically diagnosed and resolved multiple training instability issues, including policy collapse and reward hacking. This was achieved through iterative hyperparameter tuning (adjusting `gamma`, `tau`, learning rates), analysing metrics with <strong>Weights & Biases</strong>, and making precise adjustments to the environment's physics and reward signals.
     </li>
     <li>
         <strong>Model Deployment:</strong> The fully trained policy was successfully exported to the <strong>ONNX</strong> format, and an inference pipeline was created in Python using `onnxruntime` to run the model for evaluation and demonstration purposes.
@@ -53,10 +53,10 @@ permalink: /projects/
 <p>Developed a reinforcement learning agent to tackle OpenAI Procgen Benchmark environments. Used Proximal Policy Optimisation (PPO) integrated with exploration techniques like Network Distillation to enhance agent performance.</p>
 
 <h2>Norm Emergence in Multi-Agent Systems Using Deep Reinforcement Learning</h2>
-<p>Simulated complex road intersection scenarios in Unity using C#. Trained multi-agent systems with Proximal Policy Optimization (PPO) and Soft Actor-Critic (SAC) algorithms to study norm emergence in dynamic environments.</p>
+<p>Simulated complex road intersection scenarios in Unity using C#. Trained multi-agent systems with Proximal Policy Optimisation (PPO) and Soft Actor-Critic (SAC) algorithms to study norm emergence in dynamic environments.</p>
 
 <h2>Adversarial Learning for Fairness in MARL</h2>
-[cite_start]<p>Developed and deployed a Python-based multi-agent reinforcement learning (MARL) framework on AWS, utilising PyTorch, NumPy, and Matplotlib to implement a Fair-DQN agent for mitigating bias in a simulated robotic warehouse environment. [cite: 28]</p>
+<p>Developed and deployed a Python-based multi-agent reinforcement learning (MARL) framework on AWS, utilising PyTorch, NumPy, and Matplotlib to implement a Fair-DQN agent for mitigating bias in a simulated robotic warehouse environment.</p>
 
 <h2>Art-Critic</h2>
-[cite_start]<p>Built a vision-language system that analyses paintings to generate critic-style textual descriptions. [cite: 29] [cite_start]The project combined fine-tuned Hugging Face models for caption generation with transfer learning approaches using ResNet and ResNeXt for classification and image captioning. [cite: 30]</p>
+<p>Built a vision-language system that analyses paintings to generate critic-style textual descriptions. [cite: 29] [cite_start]The project combined fine-tuned Hugging Face models for caption generation with transfer learning approaches using ResNet and ResNeXt for classification and image captioning.</p>
