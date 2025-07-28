@@ -23,7 +23,7 @@
 <hr>
 
 <h2>Research Internship in Deep Reinforcement Learning - Kyushu University</h2>
-<p><strong>October 2024 – March 2025</strong> | [cite_start]Fukuoka, Japan </p>
+<p><strong>October 2024 – March 2025</strong> | Fukuoka, Japan </p>
 <p>
     I led a research project focused on addressing critical challenges in autonomous multi-drone coordination within complex, obstacle-rich 3D environments. The core of this research involved moving beyond single-agent paradigms to create a robust, scalable solution for air traffic control simulation, tackling problems of exploration, policy stability, and multi-agent coordination head-on.
 </p>
