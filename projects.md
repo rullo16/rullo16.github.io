@@ -3,7 +3,6 @@ layout: default
 title: Projects
 permalink: /projects/
 ---
-
 <h1>Projects</h1>
 
 <div class="card">
@@ -27,18 +26,18 @@ permalink: /projects/
     <span class="tag">Unity</span>
     <span class="tag">PyTorch</span>
     <span class="tag">ONNX</span>
-    <span class="tag">W&amp;B</span>
+    <span class="tag">W&B</span>
   </div>
 </div>
 
 <div class="card">
-  <h2>Cybersecurity AI: Knowledge Graphs &amp; Agentic Systems</h2>
+  <h2>Cybersecurity AI: Knowledge Graphs & Agentic Systems</h2>
   <p>
-    Part of the VIGILANCE EU project — designing hybrid knowledge graph + vector database architectures for cybersecurity AI agents, integrating threat intelligence standards with modern retrieval and orchestration frameworks.
+    Part of the VIGILANCE EU project, designing hybrid knowledge graph + vector database architectures for cybersecurity AI agents, integrating threat intelligence standards with modern retrieval and orchestration frameworks.
   </p>
   <ul>
     <li>Hybrid architecture combining Neo4j (graph) and Qdrant (vector) for structured and semantic cybersecurity knowledge.</li>
-    <li>Metadata standards integration: STIX 2.1, TAXII, MITRE ATT&amp;CK, FAIR/DCAT.</li>
+    <li>Metadata standards integration: STIX 2.1, TAXII, MITRE ATT&CK, FAIR/DCAT.</li>
     <li>Embedding approaches: RotatE for knowledge graph embeddings, SecureBERT for domain-specific text.</li>
     <li>Agent orchestration evaluated across LangGraph, CrewAI, and AutoGen.</li>
   </ul>
@@ -47,12 +46,12 @@ permalink: /projects/
     <span class="tag tag--teal">Qdrant</span>
     <span class="tag">LangGraph</span>
     <span class="tag">STIX 2.1</span>
-    <span class="tag">MITRE ATT&amp;CK</span>
+    <span class="tag">MITRE ATT&CK</span>
   </div>
 </div>
 
 <div class="card">
-  <h2>NLP: Sexism Detection &amp; Biomedical Knowledge Graph Extraction</h2>
+  <h2>NLP: Sexism Detection & Biomedical Knowledge Graph Extraction</h2>
   <ul>
     <li><strong>Sexism Detection:</strong> BiLSTM + Twitter-RoBERTa ensemble and Mistral-7B prompting for detecting sexist content in social media text.</li>
     <li><strong>Biomedical KG Extraction:</strong> End-to-end system using GLiNER2 for NER, REBEL for relation extraction, BioBERT embeddings, and Kùzu graph database. Developed for a University of Bologna collaboration.</li>

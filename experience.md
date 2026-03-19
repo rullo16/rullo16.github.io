@@ -3,17 +3,16 @@ layout: default
 title: Experience
 permalink: /experience/
 ---
-
 <h1>Professional Experience</h1>
 
 <div class="card">
-  <h2>ML Research Engineer — GFT Technologies SE</h2>
+  <h2>ML Research Engineer - GFT Technologies SE</h2>
   <p class="meta"><strong>May 2020 – Present</strong> · Milan, Italy</p>
 
-  <h3>EU Research Project Leadership</h3>
+<h3>EU Research Project Leadership</h3>
   <ul>
     <li>
-      <strong>VIGILANCE (EU-funded, ongoing):</strong> Leading two technical tasks within a Zero Trust Architecture cybersecurity platform — T5.1 (Data &amp; Knowledge Modelling) focusing on hybrid knowledge graph + vector database architectures using Neo4j and Qdrant, and T5.4 (CyberSec Agents Orchestration) designing agentic AI pipelines with LangGraph and CrewAI.
+      <strong>VIGILANCE (EU-funded, ongoing):</strong> Leading two technical tasks within a Zero Trust Architecture cybersecurity platform. T5.1 (Data & Knowledge Modelling) focusing on hybrid knowledge graph + vector database architectures using Neo4j and Qdrant, and T5.4 (CyberSec Agents Orchestration) designing agentic AI pipelines with LangGraph and CrewAI.
     </li>
     <li>
       <strong>AGENTIUM (Research Consortium, ongoing):</strong> Contributing to a consortium project on agentic AI systems. Drafted GFT's technical contributions across eight AI pillars and mapped them to specific work package tasks, with strategic recommendations on where GFT should seek leadership roles.
@@ -23,23 +22,23 @@ permalink: /experience/
     </li>
   </ul>
 
-  <h3>Smart Compliance — RAG &amp; LLM Product</h3>
+<h3>Smart Compliance - RAG & LLM Product</h3>
   <ul>
     <li>
-      <strong>Team Leader:</strong> Guided the R&amp;D team in developing an AI product utilising Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs), automating compliance checks against European Union regulations. Successfully transitioned the project from PoC to a flagship commercial product.
+      <strong>Team Leader:</strong> Guided the R&D team in developing an AI product utilising Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs), automating compliance checks against European Union regulations. Successfully transitioned the project from PoC to a flagship commercial product.
     </li>
     <li>
       <strong>LLM Application Architecture:</strong> Designed and built a production backend for LLM-powered applications, automating complex compliance checks and enabling natural language interactions with databases using Flask, FastAPI, and SQLAlchemy.
     </li>
   </ul>
 
-  <h3>Cloud &amp; Infrastructure</h3>
+<h3>Cloud & Infrastructure</h3>
   <ul>
     <li>Deployed and maintained scalable solutions on GCP and Azure, leveraging Docker and Kubernetes for reliable and efficient operations.</li>
-    <li>Contributed to EU-funded R&amp;D projects developing secure blockchain applications and a data quality optimisation pipeline, leading to promotion to Machine Learning Engineer.</li>
+    <li>Contributed to EU-funded R&D projects developing secure blockchain applications and a data quality optimisation pipeline, leading to promotion to Machine Learning Engineer.</li>
   </ul>
 
-  <div style="margin-top: 12px;">
+<div style="margin-top: 12px;">
     <span class="tag">Python</span>
     <span class="tag">PyTorch</span>
     <span class="tag">LangGraph</span>
@@ -54,14 +53,14 @@ permalink: /experience/
 </div>
 
 <div class="card">
-  <h2>Research Internship in Deep Reinforcement Learning — Kyushu University</h2>
+  <h2>Research Internship in Deep Reinforcement Learning - Kyushu University</h2>
   <p class="meta"><strong>October 2024 – March 2025</strong> · Fukuoka, Japan</p>
 
-  <p>
+<p>
     Led a research project on autonomous multi-drone coordination in complex, obstacle-rich 3D environments, moving beyond single-agent paradigms to create a robust, scalable solution for air traffic control simulation.
   </p>
 
-  <h3>Key Contributions</h3>
+<h3>Key Contributions</h3>
   <ul>
     <li>
       <strong>Simulation Environment:</strong> Engineered a physics-based 3D simulation in Unity and C#, integrated with a Python training pipeline via the Unity ML-Agents toolkit and PettingZoo Parallel API for multi-agent communication.
@@ -77,7 +76,7 @@ permalink: /experience/
     </li>
   </ul>
 
-  <div style="margin-top: 12px;">
+<div style="margin-top: 12px;">
     <span class="tag">PyTorch</span>
     <span class="tag">Unity</span>
     <span class="tag">C#</span>

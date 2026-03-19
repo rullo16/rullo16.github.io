@@ -3,7 +3,6 @@ layout: default
 title: Skills
 permalink: /skills/
 ---
-
 <h1>Technical Skills</h1>
 
 <h3>Programming Languages</h3>
@@ -15,7 +14,7 @@ permalink: /skills/
   <span class="tag">SQL</span>
 </div>
 
-<h3>Machine Learning &amp; AI</h3>
+<h3>Machine Learning & AI</h3>
 <div style="margin-bottom: 16px;">
   <span class="tag">PyTorch</span>
   <span class="tag">TensorFlow</span>
@@ -27,11 +26,11 @@ permalink: /skills/
   <span class="tag">LlamaIndex</span>
   <span class="tag">CrewAI</span>
   <span class="tag">AutoGen</span>
-  <span class="tag">Weights &amp; Biases</span>
+  <span class="tag">Weights & Biases</span>
   <span class="tag">ONNX</span>
 </div>
 
-<h3>Databases &amp; Knowledge Systems</h3>
+<h3>Databases & Knowledge Systems</h3>
 <div style="margin-bottom: 16px;">
   <span class="tag">PostgreSQL</span>
   <span class="tag">MySQL</span>
@@ -55,7 +54,7 @@ permalink: /skills/
   <span class="tag">PaperZD</span>
 </div>
 
-<h3>Cloud &amp; DevOps</h3>
+<h3>Cloud & DevOps</h3>
 <div style="margin-bottom: 16px;">
   <span class="tag">Docker</span>
   <span class="tag">Kubernetes</span>
@@ -64,14 +63,6 @@ permalink: /skills/
   <span class="tag">AWS</span>
   <span class="tag">GCP</span>
   <span class="tag">Azure</span>
-</div>
-
-<h3>Cybersecurity &amp; Data Standards</h3>
-<div style="margin-bottom: 16px;">
-  <span class="tag">STIX 2.1</span>
-  <span class="tag">TAXII</span>
-  <span class="tag">MITRE ATT&amp;CK</span>
-  <span class="tag">FAIR/DCAT</span>
 </div>
 
 <h1>Languages</h1>

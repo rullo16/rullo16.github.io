@@ -3,7 +3,6 @@ layout: default
 title: Education
 permalink: /education/
 ---
-
 <h1>Education</h1>
 
 <div class="card">
@@ -15,7 +14,7 @@ permalink: /education/
 </div>
 
 <div class="card">
-  <h2>Kyushu University — Research Period</h2>
+  <h2>Kyushu University - Research Period</h2>
   <p class="meta"><strong>October 2024 – March 2025</strong> · Fukuoka, Japan</p>
   <ul>
     <li>Research on multi-agent deep reinforcement learning for autonomous UAV corridor navigation.</li>
