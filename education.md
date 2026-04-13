@@ -9,7 +9,7 @@ permalink: /education/
   <h2>University of Bologna</h2>
   <p class="meta"><strong>MSc in Artificial Intelligence</strong> · Bologna, Italy</p>
   <ul>
-    <li>Dissertation: <em>Extending Adversarial Multi-Agent Reinforcement Learning in Rescue Missions and Safe-Critic Environments</em></li>
+    <li>Dissertation: <em>MAPPO for Multi-Agent Drone Navigation</em></li>
   </ul>
 </div>
 
