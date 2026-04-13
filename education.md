@@ -9,16 +9,7 @@ permalink: /education/
   <h2>University of Bologna</h2>
   <p class="meta"><strong>MSc in Artificial Intelligence</strong> · Bologna, Italy</p>
   <ul>
-    <li>Dissertation: <em>MAPPO for Multi-Agent Drone Navigation</em></li>
-  </ul>
-</div>
-
-<div class="card">
-  <h2>Kyushu University - Research Period</h2>
-  <p class="meta"><strong>October 2024 – March 2025</strong> · Fukuoka, Japan</p>
-  <ul>
-    <li>Research on multi-agent deep reinforcement learning for autonomous UAV corridor navigation.</li>
-    <li>Developed a 3D simulation environment in Unity integrated with a SAC-based MARL training pipeline.</li>
+    <li>Dissertation: <em>MAPPO for Multi-Agent Drone Navigation (Kyushu University)</em></li>
   </ul>
 </div>
 
