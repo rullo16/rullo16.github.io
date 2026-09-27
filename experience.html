@@ -4,8 +4,8 @@ title: Experience
 permalink: /experience/
 eyebrow: Career
 heading: Professional experience
-intro: From EU research leadership and LLM products at GFT to multi-agent RL research in Japan.
-description: Federico Rullo's professional experience as an ML Research Engineer at GFT Technologies and a deep reinforcement learning research intern at Kyushu University.
+intro: From RAG products and EU research at GFT to multi-agent RL research in Japan.
+description: Federico Rullo's professional experience as an ML Engineer at GFT Technologies, leading RAG, agent and EU research projects, and as a deep reinforcement learning research intern at Kyushu University.
 ---
 <ol class="timeline">
   {%- for job in site.data.experience %}
@@ -27,7 +27,7 @@ description: Federico Rullo's professional experience as an ML Research Engineer
       {%- if job.summary %}<p class="job__summary">{{ job.summary }}</p>{% endif %}
 
       {%- for section in job.sections %}
-      <h3 class="job__section">{{ section.title }}</h3>
+      <h3 class="job__section">{{ section.title }}{% if section.meta %}<span class="job__section-meta">{{ section.meta }}</span>{% endif %}</h3>
       <ul class="checklist">
         {%- for item in section.items %}
         <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>

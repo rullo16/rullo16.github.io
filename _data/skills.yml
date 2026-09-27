@@ -1,30 +1,34 @@
+# Skill groups follow the CV. Each icon name must exist in _includes/icon.html.
 groups:
   - title: Programming languages
     icon: code
-    items: [Python, C++, C#, Java, SQL]
-  - title: Machine learning & AI
+    items: [Python (primary), SQL, C++, Java, C#]
+  - title: ML & deep learning
     icon: cpu
-    items: [PyTorch, TensorFlow, scikit-learn, Hugging Face, Gymnasium, PettingZoo, LangGraph, LlamaIndex, CrewAI, AutoGen, Weights & Biases, ONNX]
-  - title: Methods
-    icon: flask
-    items: [Multi-agent RL, PPO / MAPPO, SAC, CTDE, Curriculum learning, Intrinsic curiosity (ICM), Knowledge distillation, RAG, Knowledge graphs]
-  - title: Databases & knowledge systems
+    items: [PyTorch, TensorFlow, scikit-learn, Hugging Face Transformers, Deep RL (MAPPO, SAC, CTDE), Gymnasium, PettingZoo, CUDA, NumPy, Pandas]
+  - title: LLMs & retrieval
+    icon: search
+    items: [RAG architecture, Hybrid retrieval, Reranking, Embeddings, Fine-tuning, Model merging, Structured outputs & tool use, Prompt engineering, RAG & agent evaluation]
+  - title: Agent frameworks
+    icon: bot
+    items: [LangGraph, LangChain, LlamaIndex, CrewAI]
+  - title: MLOps
+    icon: activity
+    items: [Dagster, MLflow, Weights & Biases, Model registry & versioning, Experiment tracking, Monitoring & drift detection, CI/CD pipelines]
+  - title: Data & storage
     icon: database
-    items: [PostgreSQL, MySQL, Neo4j, Qdrant, SQLAlchemy]
-  - title: Backend frameworks
+    items: [Qdrant, ChromaDB, Neo4j, PostgreSQL, MySQL, Kafka, SQLAlchemy]
+  - title: Backend & infrastructure
     icon: server
-    items: [FastAPI, Flask, Spring]
+    items: [FastAPI, Flask, Spring Boot, Docker, Kubernetes, GCP, Azure, AWS, GitHub Actions, Git, Linux]
   - title: Game engines
     icon: gamepad
     items: [Unreal Engine 5, Unity, PyGame, PaperZD]
-  - title: Cloud & DevOps
-    icon: cloud
-    items: [Docker, Kubernetes, Git, Linux, AWS, GCP, Azure]
 
 languages:
-  - name: Italian
-    level: Native
   - name: English
     level: Fluent
+  - name: Italian
+    level: Native
   - name: Japanese
     level: Basic (JLPT N5)

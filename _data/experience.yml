@@ -1,7 +1,8 @@
 # Professional experience, newest first.
 # Text fields accept Markdown (**bold**, [links](/projects/), `code`).
+# Each section can have an optional `meta` line, shown next to its title.
 
-- role: ML Research Engineer
+- role: ML Engineer
   org: GFT Technologies SE
   url: https://www.gft.com
   location: Milan, Italy
@@ -9,82 +10,103 @@
   end: Present
   current: true
   summary: >-
-    Technical lead for EU-funded AI research projects and for LLM products
-    that ship to customers.
+    I build and operate production AI systems and lead small teams on EU
+    research projects, taking systems from prototype to commercial deployment:
+    retrieval and agent architecture, the backend that serves it, and the MLOps
+    and evaluation that make it safe to ship.
   sections:
-    - title: EU research project leadership
+    - title: "Smart Compliance: RAG product for financial services"
+      meta: Team lead, 4 engineers
       items:
         - >-
-          **VIGILANCE** (EU-funded, ongoing): leading two technical tasks in a
-          Zero Trust Architecture cybersecurity platform. T5.1 (Data & Knowledge
-          Modelling) designs hybrid knowledge graph + vector database
-          architectures with Neo4j and Qdrant; T5.4 (CyberSec Agents
-          Orchestration) builds agentic AI pipelines with LangGraph and CrewAI.
+          Led a team of four taking a RAG compliance product from prototype to
+          commercial deployment for clients in financial services, and mentored
+          engineers new to machine learning on retrieval and evaluation.
         - >-
-          **AGENTIUM** (research consortium, ongoing): contributing to a
-          consortium project on agentic AI systems. Drafted GFT's technical
-          contributions across eight AI pillars, mapped them to work package
-          tasks, and recommended where GFT should seek leadership roles.
+          Designed the retrieval layer: hybrid dense and lexical retrieval with
+          cross-encoder reranking, structure-aware chunking, and permission
+          pre-filtering inside the vector query rather than after retrieval.
         - >-
-          **Funding and technical management**: main technical expert for EU
-          AI open calls, and technical manager of funded projects: setting the
-          technical strategy, coordinating team implementation and making sure
-          projects deliver.
-    - title: "Smart Compliance: RAG & LLM product"
+          Set up retrieval evaluation as a regression suite (faithfulness,
+          context precision and recall on a curated set) that runs on every
+          pipeline change before release.
+        - >-
+          Built the production backend in Python, FastAPI, Flask and SQLAlchemy
+          with error handling, logging and monitoring, and deployed it as
+          containerised microservices on GCP and Azure with GitHub Actions CI/CD.
+    - title: "VIGILANCE: cybersecurity agent platform (EU)"
+      meta: Task lead, 2 workstreams
       items:
         - >-
-          **Team leader**: led the R&D team building an AI product that uses
-          Retrieval-Augmented Generation (RAG) and LLMs to automate compliance
-          checks against EU regulations, taking it from proof of concept to a
-          flagship commercial product.
+          Lead the agent repository and orchestration workstreams: multi-step
+          agent workflows that use tools and produce structured outputs
+          (LangGraph), backed by a Neo4j knowledge graph and Qdrant vector
+          retrieval, and deployed as containerised microservices.
         - >-
-          **LLM application architecture**: designed and built the production
-          backend for LLM-powered applications, automating complex compliance
-          checks and enabling natural-language queries over databases with
-          Flask, FastAPI and SQLAlchemy.
-    - title: Cloud & infrastructure
+          Built the evaluation harness that decides which models and agents
+          reach production: trajectory-level tracing, tool-call success and
+          routing precision, with promotion requiring a defined margin over the
+          incumbent.
+        - >-
+          Built an end-to-end MLOps system: Dagster orchestration, MLflow
+          tracking and model registry, staged promotion with monitoring, drift
+          detection and one-step rollback.
+    - title: "REAICT: Graph-RAG knowledge base"
+      meta: Team lead
       items:
         - >-
-          Deployed and maintained scalable services on GCP and Azure with
-          Docker and Kubernetes.
+          Built a centralised cultural knowledge base on a Graph-RAG
+          architecture, designing the Neo4j schema (nodes, relationships and
+          indexed properties) that directly governs retrieval quality.
         - >-
-          Contributed to EU-funded R&D projects on secure blockchain
-          applications and a data-quality optimisation pipeline, which led to
-          my promotion to Machine Learning Engineer.
-  tags: [Python, PyTorch, LangGraph, CrewAI, Neo4j, Qdrant, FastAPI, Docker, GCP, Azure]
+          Implemented the backend with FastAPI and Neo4j, and mentored junior
+          developers on research projects.
+    - title: "KYKLOS: industrial IoT data pipeline"
+      meta: Team lead, 3 engineers
+      items:
+        - >-
+          Led a three-person team developing a data science pipeline, extending
+          the open-source StreamPipes project.
+        - >-
+          Built a Spring Boot and Java web application on PostgreSQL for
+          pipeline configuration.
+    - title: Research and EU proposals
+      items:
+        - >-
+          Authored AI proposals securing **€2M+ across 9 EU Horizon projects**,
+          and was a technical contributor to consortium bids (€45M GRAVITON,
+          €35M AGENTIUM).
+        - R&D partnerships with ESA, Toshiba and Philips.
+  tags: [Python, FastAPI, LangGraph, Neo4j, Qdrant, Dagster, MLflow, Docker, Kubernetes, GCP, Azure]
 
 - role: Research Intern, Deep Reinforcement Learning
   org: Kyushu University
   url: https://www.kyushu-u.ac.jp/en/
   location: Fukuoka, Japan
   start: Oct 2024
-  end: Mar 2025
+  end: Apr 2025
   summary: >-
-    Led a research project on autonomous multi-drone coordination in
-    obstacle-rich 3D environments, moving beyond single-agent setups towards a
-    scalable approach to air traffic control simulation.
+    Multi-agent reinforcement learning for autonomous UAV corridor navigation
+    in obstacle-rich 3D environments.
   sections:
     - title: Key contributions
       items:
         - >-
-          **Simulation environment**: engineered a physics-based 3D simulation
-          in Unity and C#, connected to a Python training pipeline through the
-          Unity ML-Agents toolkit and the PettingZoo Parallel API.
+          Implemented MAPPO with Centralised Training and Decentralised
+          Execution (CTDE) for multi-agent UAV corridor navigation, and
+          benchmarked it against a SAC approach.
         - >-
-          **Continuous control agent**: implemented a Soft Actor-Critic (SAC)
-          agent under Centralised Training with Decentralised Execution (CTDE),
-          with a custom centralised critic in PyTorch for coordinated policy
-          learning.
+          Diagnosed repeated training collapse caused by diverging value loss
+          under premature entropy decay, and resolved it with adaptive
+          KL-divergence entropy scheduling and a four-stage curriculum.
         - >-
-          **Reward engineering**: designed a hybrid reward that combines sparse
-          terminal rewards with dense, potential-based progress rewards, plus an
-          Intrinsic Curiosity Module (ICM) for exploration under sparse reward.
+          Reached **96% task success** with **1.9 times the sample efficiency**
+          of the baseline (PyTorch, Unity ML-Agents, PettingZoo).
         - >-
-          **Knowledge distillation**: distilled features from a pre-trained
-          vision model (VIP) into the agent's CNN, improving state
-          representations without the cost of a large network.
+          Built the physics-based 3D simulation in Unity and C#, connected to
+          the Python training pipeline through Unity ML-Agents.
   outcome: >-
-    The project became my MSc dissertation, where a MAPPO agent trained with a
-    staged curriculum reached **99.5% success** on the hardest, cluttered level.
-    [Read the case study](/projects/#mappo-drones).
-  tags: [PyTorch, Unity, C#, SAC, MARL, PettingZoo, ONNX]
+    I continued the project for my MSc dissertation. The final version reaches
+    **99.5% success** on the hardest, cluttered level in deterministic
+    evaluation. [Read the case study](/projects/#mappo-drones).
+  tags: [PyTorch, Unity ML-Agents, PettingZoo, MAPPO, CTDE, SAC, C#]

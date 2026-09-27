@@ -1,10 +1,11 @@
 title: Federico Rullo
-tagline: ML Research Engineer · Multi-Agent RL · Agentic AI · Game Development
+tagline: ML Engineer · RAG & Agents · MLOps · Multi-Agent RL
 description: >-
-  Federico Rullo is an ML Research Engineer in Milan working on multi-agent
-  reinforcement learning, agentic AI and knowledge graphs, and building games
-  in Unreal Engine 5.
-email: rullofederico16@gmail.com
+  Federico Rullo is an ML Engineer in Milan who takes AI systems from prototype
+  to production: retrieval and agent architectures, the backends that serve
+  them, and the MLOps and evaluation that make them safe to ship. Research
+  background in multi-agent reinforcement learning.
+email: rullofederico@pm.me
 lang: en-GB
 url: "https://rullo16.github.io"
 baseurl: ""

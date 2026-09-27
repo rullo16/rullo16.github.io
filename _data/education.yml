@@ -1,9 +1,11 @@
 - school: University of Bologna
   url: https://www.unibo.it/en
   degree: MSc in Artificial Intelligence
+  years: 2021 to 2025
+  status: Coursework and dissertation completed (degree not conferred).
   location: Bologna, Italy
   thesis: MAPPO for Multi-Agent Drone Navigation
-  thesis_note: Research carried out with Kyushu University, Japan.
+  thesis_note: Conducted at Kyushu University, Japan.
   links:
     - label: Case study
       url: /projects/#mappo-drones
@@ -12,7 +14,8 @@
 
 - school: University of Aberdeen
   url: https://www.abdn.ac.uk
-  degree: BSc (Hons) in Computing Science
+  degree: BSc in Computing Science
+  years: 2016 to 2020
   location: Aberdeen, United Kingdom
   thesis: Norm Emergence in Multi-Agent Systems Using Deep Reinforcement Learning
   links:

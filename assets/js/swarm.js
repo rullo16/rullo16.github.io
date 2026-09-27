@@ -46,16 +46,19 @@
     return textBox && x > textBox.x0 - m && x < textBox.x1 + m && y > textBox.y0 - m && y < textBox.y1 + m;
   }
 
-  // The stats card overlaps the bottom of the hero, so keep goals above it.
+  // The stats card overlaps the bottom 48px of the hero, so keep goals above it.
   function freePoint(margin) {
+    var yMax = H - 60;
     for (var i = 0; i < 40; i++) {
-      var x = rand(24, W - 24), y = rand(24, H - 72), ok = !inTextBox(x, y, margin);
+      var x = rand(24, W - 24), y = rand(16, yMax), ok = !inTextBox(x, y, margin);
       for (var j = 0; ok && j < zones.length; j++) {
         if (Math.hypot(x - zones[j].x, y - zones[j].y) < zones[j].r + margin) ok = false;
       }
       if (ok) return { x: x, y: y };
     }
-    return { x: rand(24, W - 24), y: rand(24, H - 72) };
+    // On narrow screens the text fills most of the hero: use the strip below it.
+    var below = textBox ? Math.min(textBox.y1 + margin, yMax) : 16;
+    return { x: rand(24, W - 24), y: rand(below, yMax) };
   }
 
   // After the text block moves (fonts loading, resize), move any goal that
