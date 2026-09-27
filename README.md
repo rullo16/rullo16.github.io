@@ -1,6 +1,6 @@
 # rullo16.github.io
 
-Personal website of **Federico Rullo**, ML Research Engineer (multi-agent RL, agentic AI, game development).
+Personal website of **Federico Rullo**, ML Engineer (RAG and agent systems, MLOps, multi-agent RL, game development).
 Built with Jekyll and deployed to GitHub Pages by the workflow in `.github/workflows/jekyll-gh-pages.yml`.
 
 Live at <https://rullo16.github.io>.

@@ -3,10 +3,12 @@
 # Text fields accept Markdown.
 
 categories:
+  - id: agents
+    label: RAG & agents
   - id: rl
     label: Reinforcement learning
-  - id: agents
-    label: LLMs & agents
+  - id: data
+    label: Data engineering
   - id: nlp
     label: NLP
   - id: vision
@@ -60,26 +62,88 @@ items:
       - label: Full results
         url: https://github.com/rullo16/MAPPO_Drones/blob/master/RESULTS.md
 
-  - id: vigilance
-    title: "Cybersecurity AI: Knowledge Graphs & Agentic Systems"
-    badge: EU project · VIGILANCE
+  - id: smart-compliance
+    title: "Smart Compliance: RAG for Financial Services"
+    badge: GFT product · Team lead, 4 engineers
     category: agents
     featured: true
     summary: >-
-      Hybrid knowledge graph + vector database architectures for cybersecurity
-      AI agents, combining threat-intelligence standards with modern retrieval
-      and orchestration frameworks.
+      A retrieval-augmented generation product that automates compliance
+      checks for financial-services clients. I led the team that
+      fast-prototyped it and took it to commercial deployment, and mentored
+      engineers new to machine learning on retrieval and evaluation.
     highlights:
-      - Neo4j (graph) and Qdrant (vector) together hold structured and semantic cybersecurity knowledge.
-      - "Metadata standards: STIX 2.1, TAXII, MITRE ATT&CK, FAIR/DCAT."
-      - "Embeddings: RotatE for the knowledge graph, SecureBERT for domain text."
-      - Agent orchestration evaluated across LangGraph, CrewAI and AutoGen.
-    tags: [Neo4j, Qdrant, LangGraph, STIX 2.1, MITRE ATT&CK]
+      - >-
+        **Retrieval**: hybrid dense and lexical retrieval with cross-encoder
+        reranking, structure-aware chunking, and permission pre-filtering inside
+        the vector query rather than after retrieval.
+      - >-
+        **Evaluation**: a retrieval regression suite (faithfulness, context
+        precision and recall on a curated set) that runs on every pipeline
+        change before release.
+      - >-
+        **Backend**: Python, FastAPI, Flask and SQLAlchemy with error handling,
+        logging and monitoring, shipped as containerised microservices on GCP
+        and Azure through GitHub Actions CI/CD.
+    tags: [RAG, Hybrid retrieval, Reranking, FastAPI, SQLAlchemy, GCP, Azure]
+
+  - id: vigilance
+    title: "VIGILANCE: Cybersecurity Agent Platform"
+    badge: EU project · Task lead, 2 workstreams
+    category: agents
+    featured: true
+    summary: >-
+      An EU-funded Zero Trust cybersecurity platform. I lead the agent
+      repository and orchestration workstreams: multi-step agent workflows that
+      use tools and produce structured outputs, built with LangGraph on a Neo4j
+      knowledge graph and Qdrant vector retrieval.
+    highlights:
+      - >-
+        **Evaluation harness**: decides which models and agents reach
+        production, with trajectory-level tracing, tool-call success and
+        routing precision. Promotion needs a defined margin over the incumbent.
+      - >-
+        **MLOps**: Dagster orchestration, MLflow tracking and model registry,
+        staged promotion with monitoring, drift detection and one-step
+        rollback.
+      - >-
+        **Knowledge**: threat-intelligence standards (STIX 2.1, TAXII, MITRE
+        ATT&CK) in the graph, with RotatE graph embeddings and SecureBERT for
+        domain text.
+      - Agents run as containerised microservices.
+    tags: [LangGraph, Neo4j, Qdrant, Dagster, MLflow, Docker]
+
+  - id: reaict
+    title: "REAICT: Graph-RAG Knowledge Base"
+    badge: Team lead
+    category: agents
+    featured: true
+    summary: >-
+      A centralised cultural knowledge base built on a Graph-RAG architecture.
+    highlights:
+      - >-
+        Designed the Neo4j schema: the nodes, relationships and indexed
+        properties that directly govern retrieval quality.
+      - >-
+        Built the backend with FastAPI and Neo4j, and mentored junior
+        developers on the project.
+    tags: [Graph-RAG, Neo4j, FastAPI]
+
+  - id: kyklos
+    title: "KYKLOS: Industrial IoT Data Pipeline"
+    badge: Team lead, 3 engineers
+    category: data
+    summary: >-
+      Led a three-person team developing a data science pipeline for
+      industrial IoT data.
+    highlights:
+      - Extended the open-source StreamPipes project.
+      - Built a Spring Boot and Java web application on PostgreSQL for pipeline configuration.
+    tags: [StreamPipes, Spring Boot, Java, PostgreSQL]
 
   - id: nlp
     title: "NLP: Sexism Detection & Biomedical Knowledge Graphs"
     category: nlp
-    featured: true
     summary: >-
       Two NLP pipelines: detecting sexist content in social media posts, and
       turning biomedical text into a queryable knowledge graph.
@@ -119,7 +183,6 @@ items:
     title: Norm Emergence in Multi-Agent Systems
     badge: BSc dissertation
     category: rl
-    featured: true
     summary: >-
       Simulated a road intersection in Unity and C# and trained agents with PPO
       and SAC to study how traffic norms emerge without a central authority

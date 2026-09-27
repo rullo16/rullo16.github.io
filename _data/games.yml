@@ -25,18 +25,3 @@
       widgets, with a clean Blueprint/C++ split between logic and
       presentation.
   tags: [Unreal Engine 5, C++, PaperZD, Blueprints, UMG, DataTables]
-
-- title: Dungeon Adventure
-  status: Finished
-  engine: Unreal Engine 5.7
-  summary: >-
-    A finished 2D action game in C++ and PaperZD: fight waves of
-    skeletons and boars with a sword and a limited-use bow, and pick up hearts
-    to refill your heart-container health.
-  highlights:
-    - Enemy AI controller that finds and chases the player.
-    - Arrow projectiles, bow and heart pickups, and a wave counter in the HUD.
-  tags: [Unreal Engine 5, C++, PaperZD, UMG]
-  links:
-    - label: Code
-      url: https://github.com/rullo16/DungeonAdventure

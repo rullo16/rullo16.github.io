@@ -14,14 +14,16 @@ scripts:
   <div class="hero__inner container">
     <div class="hero__content" data-swarm-avoid>
       <img class="hero__photo" src="{{ '/assets/profile-picture.jpg' | relative_url }}" alt="Portrait of Federico Rullo" width="104" height="104">
-      <p class="eyebrow eyebrow--hero">ML Research Engineer · Milan</p>
+      <p class="eyebrow eyebrow--hero">ML Engineer · Milan</p>
       <h1 class="hero__title" id="hero-title">Federico Rullo</h1>
       <p class="hero__lede">
-        I'm an ML Research Engineer at <strong>GFT Technologies SE</strong> in Milan, with
-        {{ years }}+ years of experience building production-grade AI systems and
-        leading EU-funded research projects.
+        I'm an ML Engineer at <strong>GFT Technologies SE</strong> in Milan, with
+        {{ years }}+ years of experience building and operating production AI systems and
+        leading teams on EU research projects. I take systems from prototype to commercial
+        deployment: retrieval and agent architecture, the backend that serves it, and the
+        MLOps and evaluation that make it safe to ship.
       </p>
-      <p class="hero__topics">Multi-agent RL · Agentic AI · Knowledge graphs · Game development</p>
+      <p class="hero__topics">RAG &amp; agents · MLOps · Multi-agent RL · Game development</p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="{{ '/projects/' | relative_url }}">See my projects {% include icon.html name="arrow-right" px=16 %}</a>
         <a class="btn btn--ghost" href="mailto:{{ site.email }}">{% include icon.html name="mail" px=16 %} Get in touch</a>
@@ -41,7 +43,8 @@ scripts:
 <div class="container">
   <ul class="stats" aria-label="At a glance">
     <li class="stat"><span class="stat__value">{{ years }}+</span><span class="stat__label">Years in ML engineering</span></li>
-    <li class="stat"><span class="stat__value">3</span><span class="stat__label">EU research projects</span></li>
+    <li class="stat"><span class="stat__value">7</span><span class="stat__label">EU research projects</span></li>
+    <li class="stat"><span class="stat__value">1</span><span class="stat__label">Large RAG fast-prototyping project</span></li>
     <li class="stat"><span class="stat__value">3</span><span class="stat__label">Countries lived in</span></li>
     <li class="stat"><span class="stat__value">3</span><span class="stat__label">Languages spoken</span></li>
   </ul>
@@ -53,14 +56,14 @@ scripts:
     </div>
     <div class="grid grid--2">
       <article class="card now">
-        <p class="now__kicker">EU project</p>
+        <p class="now__kicker">EU project · Task lead</p>
         <h3>VIGILANCE</h3>
-        <p>Leading two tasks in an EU-funded Zero Trust Architecture cybersecurity platform: Data &amp; Knowledge Modelling (T5.1) and CyberSec Agents Orchestration (T5.4).</p>
+        <p>Leading the agent repository and orchestration workstreams of a cybersecurity agent platform: tool-using LangGraph agents over a Neo4j knowledge graph and Qdrant retrieval, with the evaluation harness and MLOps that decide what reaches production.</p>
       </article>
       <article class="card now">
-        <p class="now__kicker">Research consortium</p>
-        <h3>AGENTIUM</h3>
-        <p>Contributing to a consortium project on agentic AI systems and shaping GFT's technical strategy across multiple AI pillars.</p>
+        <p class="now__kicker">Research funding</p>
+        <h3>EU Horizon proposals</h3>
+        <p>Writing the AI side of EU proposals: €2M+ secured so far, plus technical contributions to the €45M GRAVITON and €35M AGENTIUM consortium bids.</p>
       </article>
       <article class="card now">
         <p class="now__kicker">Game development</p>
@@ -118,7 +121,7 @@ scripts:
 
   <section class="section contact" aria-labelledby="contact-title">
     <h2 id="contact-title">Let's talk</h2>
-    <p>Questions about multi-agent RL, agentic AI or one of my projects? Email is the quickest way to reach me.</p>
+    <p>Questions about RAG, agents, multi-agent RL or one of my projects? Email is the quickest way to reach me.</p>
     <div class="contact__actions">
       <a class="btn btn--primary" href="mailto:{{ site.email }}">{% include icon.html name="mail" px=16 %} {{ site.email }}</a>
       <a class="btn btn--ghost" href="https://www.linkedin.com/in/federico-rullo-683677145" target="_blank" rel="noopener">{% include icon.html name="linkedin" px=16 %} LinkedIn</a>
