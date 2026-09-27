@@ -1,0 +1,32 @@
+---
+layout: page
+title: Skills
+permalink: /skills/
+eyebrow: Toolbox
+heading: Technical skills
+intro: The languages, frameworks and methods I use day to day, in research and in production.
+description: Technical skills of Federico Rullo, covering Python, PyTorch, multi-agent reinforcement learning, LLM agent frameworks, knowledge graphs, cloud and game engines.
+---
+<div class="grid grid--2 skills">
+  {%- for g in site.data.skills.groups %}
+  <section class="card skill-group" aria-labelledby="skill-{{ forloop.index }}">
+    <h2 class="skill-group__title" id="skill-{{ forloop.index }}">
+      <span class="skill-group__icon" aria-hidden="true">{% include icon.html name=g.icon px=18 %}</span>
+      {{ g.title }}
+    </h2>
+    {% include tags.html tags=g.items %}
+  </section>
+  {%- endfor %}
+</div>
+
+<section class="section" aria-labelledby="languages-title">
+  <h2 id="languages-title">Languages</h2>
+  <ul class="languages">
+    {%- for l in site.data.skills.languages %}
+    <li class="card language">
+      <span class="language__name">{{ l.name }}</span>
+      <span class="language__level">{{ l.level }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>

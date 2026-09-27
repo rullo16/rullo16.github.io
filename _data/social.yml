@@ -1,0 +1,10 @@
+# Contact links shown in the hero and the footer.
+- name: GitHub
+  icon: github
+  url: https://github.com/rullo16
+- name: LinkedIn
+  icon: linkedin
+  url: https://www.linkedin.com/in/federico-rullo-683677145
+- name: Email
+  icon: mail
+  url: mailto:rullofederico16@gmail.com

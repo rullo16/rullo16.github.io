@@ -1,0 +1,46 @@
+---
+layout: page
+title: Experience
+permalink: /experience/
+eyebrow: Career
+heading: Professional experience
+intro: From EU research leadership and LLM products at GFT to multi-agent RL research in Japan.
+description: Federico Rullo's professional experience as an ML Research Engineer at GFT Technologies and a deep reinforcement learning research intern at Kyushu University.
+---
+<ol class="timeline">
+  {%- for job in site.data.experience %}
+  <li class="timeline__item{% if job.current %} is-current{% endif %}">
+    <article class="card job">
+      <header class="job__head">
+        <div>
+          <h2 class="job__role">{{ job.role }}</h2>
+          <p class="job__org">
+            {%- if job.url %}<a href="{{ job.url }}" target="_blank" rel="noopener">{{ job.org }}</a>{% else %}{{ job.org }}{% endif -%}
+          </p>
+        </div>
+        <p class="job__meta">
+          <span>{% include icon.html name="calendar" px=15 %}{{ job.start }} to {{ job.end }}</span>
+          <span>{% include icon.html name="pin" px=15 %}{{ job.location }}</span>
+        </p>
+      </header>
+
+      {%- if job.summary %}<p class="job__summary">{{ job.summary }}</p>{% endif %}
+
+      {%- for section in job.sections %}
+      <h3 class="job__section">{{ section.title }}</h3>
+      <ul class="checklist">
+        {%- for item in section.items %}
+        <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+        {%- endfor %}
+      </ul>
+      {%- endfor %}
+
+      {%- if job.outcome %}
+      <p class="callout">{{ job.outcome | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+      {%- endif %}
+
+      <div class="card__foot">{% include tags.html tags=job.tags %}</div>
+    </article>
+  </li>
+  {%- endfor %}
+</ol>

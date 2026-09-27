@@ -1,0 +1,46 @@
+# Success rate on FinalLevel (the cluttered, hardest level), deterministic
+# evaluation, 100-200 episodes per cell. Source: MAPPO_Drones/RESULTS.md.
+
+final_level:
+  - group: Baselines
+    rows:
+      - label: MPPI, learned dynamics
+        note: Model-based planner
+        value: 0
+      - label: Proportional controller
+        note: Privileged goal direction, no obstacle sensing
+        value: 67
+  - group: MAPPO
+    rows:
+      - label: MAPPO, full method
+        note: Curriculum + pretrained encoder + ICM
+        value: 99.5
+        highlight: true
+  - group: Ablations, retrained from scratch
+    rows:
+      - label: Without curiosity (ICM)
+        note: Dense shaped reward is enough
+        value: 100
+      - label: Random vision encoder
+        note: No contrastive pretraining
+        value: 86.5
+      - label: Without curriculum
+        note: Trained on FinalLevel only
+        value: 8.5
+
+# Full table, success rate per level.
+levels: [Level 1, Level 1.5, Level 2, FinalLevel]
+table:
+  - method: MPPI, learned dynamics
+    values: ["0%", "not run", "not run", "0%"]
+  - method: Proportional controller (privileged)
+    values: ["100%", "100%", "100%", "67%"]
+  - method: MAPPO
+    values: ["100%", "100%", "100%", "99.5%"]
+    highlight: true
+  - method: "Ablation: no curriculum"
+    values: ["n/a", "n/a", "n/a", "8.5%"]
+  - method: "Ablation: no curiosity"
+    values: ["100%", "100%", "100%", "100%"]
+  - method: "Ablation: random encoder"
+    values: ["100%", "100%", "100%", "86.5%"]

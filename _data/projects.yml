@@ -1,0 +1,165 @@
+# Projects shown on /projects/. Set `featured: true` to also show a project on
+# the home page. `category` must match one of the ids in `categories` below.
+# Text fields accept Markdown.
+
+categories:
+  - id: rl
+    label: Reinforcement learning
+  - id: agents
+    label: LLMs & agents
+  - id: nlp
+    label: NLP
+  - id: vision
+    label: Vision
+
+items:
+  - id: mappo-drones
+    title: MAPPO for Multi-Agent Drone Navigation
+    badge: MSc dissertation · Kyushu University
+    category: rl
+    featured: true
+    case_study: true
+    summary: >-
+      A swarm of drones learns to reach its goals through cluttered 3D airspace
+      using only its own camera and sensor readings. The environment is built
+      in Unity ML-Agents and the drones are trained with Multi-Agent PPO under
+      Centralised Training with Decentralised Execution (CTDE).
+    highlights:
+      - >-
+        **Algorithm**: MAPPO with GAE, a tanh-squashed Gaussian policy and
+        KL-based early stopping. Actors share parameters and act on local
+        observations; a centralised critic sees every agent.
+      - >-
+        **Curriculum**: four stages with success gates. Without it, success on
+        the hardest level falls from 99.5% to 8.5%.
+      - >-
+        **Perception**: a compact CNN encoder, contrastively pretrained and
+        frozen during RL, adds 13 points on the cluttered level over a random
+        encoder.
+      - >-
+        **Baselines**: an MPPI controller with a learned dynamics model and a
+        privileged proportional controller that is handed the goal direction.
+      - >-
+        **Engineering**: independent per-agent episodes through the low-level
+        ML-Agents API, training health monitors that abort stalled runs, a
+        pytest suite in CI and Weights & Biases logging.
+    story: >-
+      An earlier 2.39M-step run reached only 2% success. The post-mortem found
+      an oversized entropy bonus, a curiosity module trained on misaligned
+      pairs, a vision checkpoint that silently failed to load, a curriculum
+      gate that could never trigger, and a progress reward that paid drones to
+      oscillate in place. Fixing those bugs, making the reward potential-based
+      and symmetric, giving each drone its own goal and letting episodes end
+      independently took the hardest level to 99.5%. The first iteration,
+      SAC with VIP feature distillation, is kept in the repository for
+      reference.
+    tags: [MAPPO, CTDE, Curriculum learning, Unity ML-Agents, PyTorch, W&B]
+    links:
+      - label: Code
+        url: https://github.com/rullo16/MAPPO_Drones
+      - label: Full results
+        url: https://github.com/rullo16/MAPPO_Drones/blob/master/RESULTS.md
+
+  - id: vigilance
+    title: "Cybersecurity AI: Knowledge Graphs & Agentic Systems"
+    badge: EU project · VIGILANCE
+    category: agents
+    featured: true
+    summary: >-
+      Hybrid knowledge graph + vector database architectures for cybersecurity
+      AI agents, combining threat-intelligence standards with modern retrieval
+      and orchestration frameworks.
+    highlights:
+      - Neo4j (graph) and Qdrant (vector) together hold structured and semantic cybersecurity knowledge.
+      - "Metadata standards: STIX 2.1, TAXII, MITRE ATT&CK, FAIR/DCAT."
+      - "Embeddings: RotatE for the knowledge graph, SecureBERT for domain text."
+      - Agent orchestration evaluated across LangGraph, CrewAI and AutoGen.
+    tags: [Neo4j, Qdrant, LangGraph, STIX 2.1, MITRE ATT&CK]
+
+  - id: nlp
+    title: "NLP: Sexism Detection & Biomedical Knowledge Graphs"
+    category: nlp
+    featured: true
+    summary: >-
+      Two NLP pipelines: detecting sexist content in social media posts, and
+      turning biomedical text into a queryable knowledge graph.
+    highlights:
+      - >-
+        **Sexism detection**: a BiLSTM + Twitter-RoBERTa ensemble and
+        Mistral-7B prompting for detecting sexist content in social media
+        posts.
+      - >-
+        **Biomedical KG extraction**: an end-to-end pipeline with GLiNER2 for
+        named entities, REBEL for relations, BioBERT embeddings and a Kùzu
+        graph database, built for a University of Bologna collaboration.
+    tags: [Hugging Face, BiLSTM, RoBERTa, Mistral-7B, GLiNER2, Kùzu]
+
+  - id: adversar
+    title: Extending Adversarial MARL in Rescue Missions
+    category: rl
+    summary: >-
+      Extended the AdverSAR framework to a dynamic 3D Unity environment and
+      adapted the algorithm to the higher-dimensional space, where agents must
+      extract objectives without being detected by adversarial agents.
+    tags: [Unity, MARL, PyTorch]
+
+  - id: procgen
+    title: AutonomousProcgen
+    category: rl
+    summary: >-
+      A reinforcement learning agent for the OpenAI Procgen Benchmark, using
+      Proximal Policy Optimisation (PPO) with network distillation for better
+      exploration.
+    tags: [PPO, Procgen, Python]
+    links:
+      - label: Code
+        url: https://github.com/rullo16/AutonomousProcgen
+
+  - id: norm-emergence
+    title: Norm Emergence in Multi-Agent Systems
+    badge: BSc dissertation
+    category: rl
+    featured: true
+    summary: >-
+      Simulated a road intersection in Unity and C# and trained agents with PPO
+      and SAC to study how traffic norms emerge without a central authority
+      enforcing them.
+    tags: [PPO, SAC, Unity, C#]
+    links:
+      - label: Paper
+        url: https://drive.google.com/file/d/1V545XsBR2xLV0zlCasFwu_-leac5LMH1/view?usp=sharing
+      - label: Code
+        url: https://github.com/rullo16/Dissertation-BSC-with-Honours-Computing-sicence
+
+  - id: fair-marl
+    title: Adversarial Learning for Fairness in MARL
+    category: rl
+    summary: >-
+      A Python MARL framework deployed on AWS, with a Fair-DQN agent that
+      mitigates bias in a simulated robotic warehouse, built in PyTorch.
+    tags: [Fair-DQN, AWS, PyTorch]
+
+  - id: art-critic
+    title: "Multimodal: Art-Critic"
+    category: vision
+    summary: >-
+      A vision-language system that analyses paintings and writes
+      critic-style descriptions of them, then can render a new image from the
+      description in a different artistic style. Combines fine-tuned Hugging
+      Face captioning models with ResNet and ResNeXt classifiers.
+    tags: [Hugging Face, ResNet, Transfer learning]
+    links:
+      - label: Code
+        url: https://github.com/rullo16/Art
+
+# Smaller or older work, listed compactly under the project grid.
+more:
+  - title: VLSI placement
+    note: Circuit placement solved four ways, with CP, MIP, SAT and SMT (Z3).
+    url: https://github.com/rullo16/VLSI
+  - title: Tablut AI
+    note: Minimax player with alpha-beta pruning for the University of Bologna Tablut competition.
+    url: https://github.com/rullo16/Tablut
+  - title: Inceptionism
+    note: DeepDream-style feature visualisation notebooks.
+    url: https://github.com/rullo16/Inceptionism

@@ -1,0 +1,72 @@
+---
+layout: page
+title: Games
+permalink: /games/
+eyebrow: Side quests
+heading: Games
+intro: I build games in Unreal Engine 5 and Unity. One of them runs right here in your browser.
+description: Games by Federico Rullo, including an HD-2D dungeon adventure in Unreal Engine 5 and a top-down shooter you can play in the browser.
+---
+<section class="section section--flush" aria-labelledby="play-title">
+  <div class="section__head section__head--split">
+    <div>
+      <p class="eyebrow">Playable</p>
+      <h2 id="play-title">Top-down shooter</h2>
+    </div>
+    <a class="more-link" href="https://github.com/rullo16/TopDown" target="_blank" rel="noopener">{% include icon.html name="github" px=16 %} Source</a>
+  </div>
+  <p>A top-down shooter built in Unity and exported to WebGL. The build is loaded only when you press play.</p>
+
+  <div class="game" data-game data-game-src="https://rullo16.github.io/TopDown/" data-game-width="960" data-game-height="638" data-game-title="Top-down shooter, Unity WebGL">
+    <div class="game__stage" data-game-stage>
+      <button class="game__start" type="button" data-game-start>
+        <span class="game__play">{% include icon.html name="play" px=28 %}</span>
+        <span class="game__cta">Play in the browser</span>
+        <span class="game__hint">About 60 MB download · best on desktop with keyboard and mouse</span>
+      </button>
+      <noscript>
+        <a class="game__start" href="https://rullo16.github.io/TopDown/">
+          <span class="game__play">{% include icon.html name="play" px=28 %}</span>
+          <span class="game__cta">Open the game</span>
+          <span class="game__hint">About 60 MB download · best on desktop with keyboard and mouse</span>
+        </a>
+      </noscript>
+    </div>
+  </div>
+
+  <div class="game__bar">
+    <dl class="controls">
+      <div><dt><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrow keys</dt><dd>Move</dd></div>
+      <div><dt>Mouse</dt><dd>Aim</dd></div>
+      <div><dt>Left click</dt><dd>Shoot</dd></div>
+    </dl>
+    <a class="link-pill" href="https://rullo16.github.io/TopDown/" target="_blank" rel="noopener">{% include icon.html name="maximize" px=16 %}<span>Open full window</span></a>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="ue-title">
+  <h2 id="ue-title">Unreal Engine 5</h2>
+  <div class="stack">
+    {%- for g in site.data.games %}
+    <article class="card game-card">
+      <p class="project__meta">
+        <span class="status{% if g.status == 'In development' %} status--live{% endif %}">{{ g.status }}</span>
+        <span class="project__cat">{{ g.engine }}</span>
+      </p>
+      <h3 class="project__title">{{ g.title }}</h3>
+      <p>{{ g.summary }}</p>
+      {%- if g.highlights %}
+      <ul class="checklist">
+        {%- for h in g.highlights %}
+        <li>{{ h | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      <div class="card__foot">
+        {% include tags.html tags=g.tags %}
+        {% include links.html links=g.links %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>

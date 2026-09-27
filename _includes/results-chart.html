@@ -1,0 +1,44 @@
+{%- assign r = site.data.drone_results -%}
+{%- assign cid = include.id | default: "results" -%}
+<figure class="chart" data-reveal aria-labelledby="{{ cid }}-title">
+  <figcaption class="chart__head">
+    <p class="chart__title" id="{{ cid }}-title">Success rate on the hardest, cluttered level</p>
+    <p class="chart__sub">Deterministic evaluation, 100 to 200 episodes per bar. The highlighted bar is the full method.</p>
+  </figcaption>
+
+  {%- for g in r.final_level %}
+  <p class="chart__group">{{ g.group }}</p>
+  <ul class="chart__rows">
+    {%- for row in g.rows %}
+    <li class="chart__row{% if row.highlight %} is-highlight{% endif %}">
+      <span class="chart__label">{{ row.label }}<span class="chart__note">{{ row.note }}</span></span>
+      <span class="chart__track" aria-hidden="true"><span class="chart__bar" style="--v: {{ row.value }}"></span></span>
+      <span class="chart__value">{{ row.value }}%</span>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endfor %}
+
+  <details class="chart__table">
+    <summary>Show every level as a table</summary>
+    <div class="table-wrap">
+      <table>
+        <caption class="sr-only">Success rate by method and curriculum level</caption>
+        <thead>
+          <tr>
+            <th scope="col">Method</th>
+            {%- for level in r.levels %}<th scope="col">{{ level }}</th>{% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {%- for row in r.table %}
+          <tr{% if row.highlight %} class="is-highlight"{% endif %}>
+            <th scope="row">{{ row.method }}</th>
+            {%- for v in row.values %}<td>{{ v }}</td>{% endfor %}
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+  </details>
+</figure>

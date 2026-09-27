@@ -1,0 +1,22 @@
+- school: University of Bologna
+  url: https://www.unibo.it/en
+  degree: MSc in Artificial Intelligence
+  location: Bologna, Italy
+  thesis: MAPPO for Multi-Agent Drone Navigation
+  thesis_note: Research carried out with Kyushu University, Japan.
+  links:
+    - label: Case study
+      url: /projects/#mappo-drones
+    - label: Code
+      url: https://github.com/rullo16/MAPPO_Drones
+
+- school: University of Aberdeen
+  url: https://www.abdn.ac.uk
+  degree: BSc (Hons) in Computing Science
+  location: Aberdeen, United Kingdom
+  thesis: Norm Emergence in Multi-Agent Systems Using Deep Reinforcement Learning
+  links:
+    - label: Dissertation (PDF)
+      url: https://drive.google.com/file/d/1V545XsBR2xLV0zlCasFwu_-leac5LMH1/view?usp=sharing
+    - label: Code
+      url: https://github.com/rullo16/Dissertation-BSC-with-Honours-Computing-sicence

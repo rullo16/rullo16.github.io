@@ -1,0 +1,72 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+eyebrow: Work
+heading: Projects
+intro: Research and engineering across multi-agent reinforcement learning, agentic AI, NLP and vision.
+description: Projects by Federico Rullo, including MAPPO for multi-agent drone navigation, cybersecurity knowledge graphs for AI agents, and NLP pipelines.
+---
+{%- assign data = site.data.projects -%}
+
+{%- for p in data.items %}{% if p.case_study %}
+<article class="case" id="{{ p.id }}">
+  <div class="case__intro">
+    <p class="project__meta">
+      <span class="project__cat">Case study</span>
+      {%- if p.badge %}<span class="badge">{{ p.badge }}</span>{% endif %}
+    </p>
+    <h2 class="case__title">{{ p.title }}</h2>
+    <p class="lede">{{ p.summary }}</p>
+  </div>
+  <div class="case__grid">
+    <div class="case__body">
+      <h3>How it works</h3>
+      <ul class="checklist">
+        {%- for h in p.highlights %}
+        <li>{{ h | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+        {%- endfor %}
+      </ul>
+      <h3>From 2% to 99.5%</h3>
+      <p>{{ p.story }}</p>
+      {% include tags.html tags=p.tags %}
+      {% include links.html links=p.links %}
+    </div>
+    <div class="case__chart">
+      {% include results-chart.html id="case-results" %}
+    </div>
+  </div>
+</article>
+{%- endif %}{% endfor %}
+
+<section class="section" aria-labelledby="all-projects">
+  <div class="section__head section__head--split">
+    <h2 id="all-projects">More projects</h2>
+    <div class="chips" role="group" aria-label="Filter projects by area" data-filter hidden>
+      <button class="chip" type="button" data-filter-value="all" aria-pressed="true">All</button>
+      {%- for c in data.categories %}
+      <button class="chip" type="button" data-filter-value="{{ c.id }}" aria-pressed="false">{{ c.label }}</button>
+      {%- endfor %}
+    </div>
+  </div>
+  <p class="sr-only" aria-live="polite" data-filter-status></p>
+  <div class="grid grid--2" data-filter-grid>
+    {%- for p in data.items %}{% unless p.case_study %}
+      {% include project-card.html project=p %}
+    {%- endunless %}{% endfor %}
+  </div>
+</section>
+
+{%- if data.more %}
+<section class="section" aria-labelledby="more-title">
+  <h2 id="more-title" class="h3">Also on GitHub</h2>
+  <ul class="minilist">
+    {%- for m in data.more %}
+    <li>
+      <a href="{{ m.url }}" target="_blank" rel="noopener">{% include icon.html name="github" px=16 %}<span>{{ m.title }}</span></a>
+      <span class="minilist__note">{{ m.note }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
