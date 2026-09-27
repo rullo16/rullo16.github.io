@@ -1,0 +1,23 @@
+{%- assign p = include.project -%}
+<article class="card project" id="{{ p.id }}" data-category="{{ p.category }}">
+  {%- assign cat = site.data.projects.categories | where: "id", p.category | first %}
+  <p class="project__meta">
+    <span class="project__cat">{{ cat.label }}</span>
+    {%- if p.badge %}<span class="badge">{{ p.badge }}</span>{% endif %}
+  </p>
+  <h3 class="project__title">{{ p.title }}</h3>
+  {%- if p.summary %}
+  <p>{{ p.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+  {%- endif %}
+  {%- if p.highlights and include.compact != true %}
+  <ul class="checklist">
+    {%- for h in p.highlights %}
+    <li>{{ h | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+  <div class="card__foot">
+    {% include tags.html tags=p.tags %}
+    {% include links.html links=p.links %}
+  </div>
+</article>

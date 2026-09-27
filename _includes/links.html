@@ -1,0 +1,20 @@
+{%- comment -%}
+  Row of action links. Usage: {% include links.html links=item.links %}
+  The icon is picked from the URL: GitHub, a document, an internal page, or external.
+{%- endcomment -%}
+{%- if include.links and include.links.size > 0 -%}
+<ul class="links">
+  {%- for link in include.links %}
+    {%- assign first = link.url | slice: 0 %}
+    {%- if link.url contains 'github.com' %}{% assign icon = 'github' %}
+    {%- elsif link.label contains 'PDF' or link.label contains 'Paper' %}{% assign icon = 'file' %}
+    {%- elsif first == '/' %}{% assign icon = 'arrow-right' %}
+    {%- else %}{% assign icon = 'external' %}{% endif %}
+  <li>
+    <a class="link-pill" href="{% if first == '/' %}{{ link.url | relative_url }}{% else %}{{ link.url }}{% endif %}"{% unless first == '/' %} target="_blank" rel="noopener"{% endunless %}>
+      {% include icon.html name=icon px=16 %}<span>{{ link.label }}</span>
+    </a>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif -%}

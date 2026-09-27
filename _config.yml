@@ -1,12 +1,47 @@
 title: Federico Rullo
+tagline: ML Research Engineer · Multi-Agent RL · Agentic AI · Game Development
+description: >-
+  Federico Rullo is an ML Research Engineer in Milan working on multi-agent
+  reinforcement learning, agentic AI and knowledge graphs, and building games
+  in Unreal Engine 5.
 email: rullofederico16@gmail.com
-description: ML Research Engineer · Deep Reinforcement Learning · Multi-Agent Systems · Game Development
-baseurl: ""
+lang: en-GB
 url: "https://rullo16.github.io"
+baseurl: ""
 permalink: pretty
-remote_theme: pages-themes/cayman@v0.2.0
+
+# First day at GFT. Used to compute "years of experience" at build time.
+career_start: 2020-05-01
+
+author:
+  name: Federico Rullo
+  url: "https://rullo16.github.io"
+
+social:
+  name: Federico Rullo
+  links:
+    - https://github.com/rullo16
+    - https://www.linkedin.com/in/federico-rullo-683677145
+
+# Default social preview image for every page.
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/img/og-card.png
+
+# The layout and styles are all in this repo, so opt out of the default
+# GitHub Pages theme (Primer) that would otherwise be added.
+theme: null
+
 plugins:
   - jekyll-seo-tag
-  - jekyll-feed
   - jekyll-sitemap
-  - jekyll-paginate
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github

@@ -1,36 +1,127 @@
 ---
 layout: default
-title: Home
+seo:
+  type: Person
+scripts:
+  - /assets/js/swarm.js
 ---
+{%- assign start = site.career_start | date: '%s' | plus: 0 -%}
+{%- assign now = site.time | date: '%s' | plus: 0 -%}
+{%- assign years = now | minus: start | divided_by: 31557600 -%}
 
-<section class="hero-intro">
-  <p>
-    I'm an <strong>ML Research Engineer</strong> at <strong>GFT Technologies SE</strong> in Milan, with 5+ years of experience building production-grade AI systems, leading EU-funded research projects.
+<section class="hero" aria-labelledby="hero-title">
+  <canvas class="hero__swarm" data-swarm aria-hidden="true"></canvas>
+  <div class="hero__inner container">
+    <div class="hero__content" data-swarm-avoid>
+      <img class="hero__photo" src="{{ '/assets/profile-picture.jpg' | relative_url }}" alt="Portrait of Federico Rullo" width="104" height="104">
+      <p class="eyebrow eyebrow--hero">ML Research Engineer · Milan</p>
+      <h1 class="hero__title" id="hero-title">Federico Rullo</h1>
+      <p class="hero__lede">
+        I'm an ML Research Engineer at <strong>GFT Technologies SE</strong> in Milan, with
+        {{ years }}+ years of experience building production-grade AI systems and
+        leading EU-funded research projects.
+      </p>
+      <p class="hero__topics">Multi-agent RL · Agentic AI · Knowledge graphs · Game development</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="{{ '/projects/' | relative_url }}">See my projects {% include icon.html name="arrow-right" px=16 %}</a>
+        <a class="btn btn--ghost" href="mailto:{{ site.email }}">{% include icon.html name="mail" px=16 %} Get in touch</a>
+      </div>
+      <ul class="hero__social" aria-label="Profiles">
+        {%- for link in site.data.social %}{% unless link.icon == 'mail' %}
+        <li><a href="{{ link.url }}" target="_blank" rel="noopener" aria-label="{{ link.name }}">{% include icon.html name=link.icon px=20 %}</a></li>
+        {%- endunless %}{% endfor %}
+      </ul>
+    </div>
+  </div>
+  <p class="hero__sim" aria-hidden="true">
+    <span class="hero__sim-dot"></span>multi-agent swarm · goals reached: <span data-swarm-count>0</span>
   </p>
 </section>
 
-<div class="highlights">
-  <div class="highlight-card">
-    <div class="number">5+</div>
-    <div class="label">Years in ML Engineering</div>
-  </div>
-  <div class="highlight-card">
-    <div class="number">3</div>
-    <div class="label">EU Research Projects</div>
-  </div>
-  <div class="highlight-card">
-    <div class="number">3</div>
-    <div class="label">Countries Lived In</div>
-  </div>
-  <div class="highlight-card">
-    <div class="number">3</div>
-    <div class="label">Languages Spoken</div>
-  </div>
-</div>
+<div class="container">
+  <ul class="stats" aria-label="At a glance">
+    <li class="stat"><span class="stat__value">{{ years }}+</span><span class="stat__label">Years in ML engineering</span></li>
+    <li class="stat"><span class="stat__value">3</span><span class="stat__label">EU research projects</span></li>
+    <li class="stat"><span class="stat__value">3</span><span class="stat__label">Countries lived in</span></li>
+    <li class="stat"><span class="stat__value">3</span><span class="stat__label">Languages spoken</span></li>
+  </ul>
 
-<h2>Current Focus</h2>
-<ul>
-  <li><strong>VIGILANCE</strong> Leading two tasks within an EU-funded Zero Trust Architecture cybersecurity platform: Data &amp; Knowledge Modelling (T5.1) and CyberSec Agents Orchestration (T5.4).</li>
-  <li><strong>AGENTIUM</strong> Contributing to a research consortium project focused on agentic AI systems, driving GFT's technical strategy across multiple AI pillars.</li>
-  <li><strong>Game Development</strong> Building a 2D HD2D-style dungeon adventure game in Unreal Engine 5 with C++ and PaperZD.</li>
-</ul>
+  <section class="section" aria-labelledby="now-title">
+    <div class="section__head">
+      <p class="eyebrow">Now</p>
+      <h2 id="now-title">What I'm working on</h2>
+    </div>
+    <div class="grid grid--2">
+      <article class="card now">
+        <p class="now__kicker">EU project</p>
+        <h3>VIGILANCE</h3>
+        <p>Leading two tasks in an EU-funded Zero Trust Architecture cybersecurity platform: Data &amp; Knowledge Modelling (T5.1) and CyberSec Agents Orchestration (T5.4).</p>
+      </article>
+      <article class="card now">
+        <p class="now__kicker">Research consortium</p>
+        <h3>AGENTIUM</h3>
+        <p>Contributing to a consortium project on agentic AI systems and shaping GFT's technical strategy across multiple AI pillars.</p>
+      </article>
+      <article class="card now">
+        <p class="now__kicker">Game development</p>
+        <h3>HD-2D Dungeon Adventure</h3>
+        <p>Building an HD-2D-style dungeon adventure in Unreal Engine 5 with C++ and PaperZD. <a href="{{ '/games/' | relative_url }}">See the games</a>.</p>
+      </article>
+      <article class="card now">
+        <p class="now__kicker">Learning</p>
+        <h3>ML Zoomcamp</h3>
+        <p>Working through model deployment with FastAPI and Docker, serverless inference on AWS Lambda, and Kubernetes. <a href="https://github.com/rullo16/ml-zoomcamp-ex" target="_blank" rel="noopener">Follow along on GitHub</a>.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section feature" aria-labelledby="feature-title">
+    <div class="feature__text">
+      <p class="eyebrow">Featured research</p>
+      <h2 id="feature-title">Teaching a drone swarm to fly through clutter</h2>
+      <p>
+        For my MSc dissertation, carried out with Kyushu University, I trained drones in a Unity
+        simulation to reach their goals using only their own camera and sensors. On open levels the
+        MAPPO policy matches a hand-tuned controller that is handed the exact goal direction. On the
+        cluttered level it is the only method that succeeds: 99.5% against 67%.
+      </p>
+      <p>
+        The ablations show what mattered most. Without the staged curriculum, success on that level
+        drops from 99.5% to 8.5%.
+      </p>
+      <ul class="links">
+        <li><a class="link-pill" href="{{ '/projects/#mappo-drones' | relative_url }}">{% include icon.html name="arrow-right" px=16 %}<span>Read the case study</span></a></li>
+        <li><a class="link-pill" href="https://github.com/rullo16/MAPPO_Drones" target="_blank" rel="noopener">{% include icon.html name="github" px=16 %}<span>Code</span></a></li>
+      </ul>
+    </div>
+    <div class="feature__chart">
+      {% include results-chart.html id="home-results" %}
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="projects-title">
+    <div class="section__head section__head--split">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h2 id="projects-title">Projects</h2>
+      </div>
+      <a class="more-link" href="{{ '/projects/' | relative_url }}">All projects {% include icon.html name="arrow-right" px=16 %}</a>
+    </div>
+    <div class="grid grid--3">
+      {%- for p in site.data.projects.items %}
+        {%- if p.featured and p.case_study != true %}
+          {% include project-card.html project=p compact=true %}
+        {%- endif %}
+      {%- endfor %}
+    </div>
+  </section>
+
+  <section class="section contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Let's talk</h2>
+    <p>Questions about multi-agent RL, agentic AI or one of my projects? Email is the quickest way to reach me.</p>
+    <div class="contact__actions">
+      <a class="btn btn--primary" href="mailto:{{ site.email }}">{% include icon.html name="mail" px=16 %} {{ site.email }}</a>
+      <a class="btn btn--ghost" href="https://www.linkedin.com/in/federico-rullo-683677145" target="_blank" rel="noopener">{% include icon.html name="linkedin" px=16 %} LinkedIn</a>
+    </div>
+  </section>
+</div>

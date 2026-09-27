@@ -1,0 +1,27 @@
+---
+layout: page
+title: Education
+permalink: /education/
+eyebrow: Study
+heading: Education
+intro: Two degrees, two dissertations, both on agents that learn to cooperate.
+description: Federico Rullo's education, an MSc in Artificial Intelligence from the University of Bologna and a BSc in Computing Science from the University of Aberdeen.
+---
+<div class="grid grid--2">
+  {%- for e in site.data.education %}
+  <article class="card edu">
+    <p class="edu__icon" aria-hidden="true">{% include icon.html name="cap" px=20 %}</p>
+    <h2 class="edu__degree">{{ e.degree }}</h2>
+    <p class="edu__school">
+      {%- if e.url %}<a href="{{ e.url }}" target="_blank" rel="noopener">{{ e.school }}</a>{% else %}{{ e.school }}{% endif -%}
+      <span class="edu__place">{{ e.location }}</span>
+    </p>
+    <div class="edu__thesis">
+      <p class="edu__label">Dissertation</p>
+      <p class="edu__title">{{ e.thesis }}</p>
+      {%- if e.thesis_note %}<p class="edu__note">{{ e.thesis_note }}</p>{% endif %}
+    </div>
+    <div class="card__foot">{% include links.html links=e.links %}</div>
+  </article>
+  {%- endfor %}
+</div>

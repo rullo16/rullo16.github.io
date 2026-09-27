@@ -1,0 +1,42 @@
+# Game projects shown on /games/. The playable WebGL build is set up in games.html.
+
+- title: HD-2D Dungeon Adventure
+  status: In development
+  engine: Unreal Engine 5
+  summary: >-
+    An HD-2D-style dungeon adventure built from scratch in Unreal Engine 5
+    with C++ and the PaperZD plugin for 2D animation. A personal project where
+    I design and implement every system myself.
+  highlights:
+    - >-
+      **Dialogue system**: a dialogue framework backed by DataTables, with a
+      typewriter text reveal. NPCs support branching conversations triggered
+      through interaction.
+    - >-
+      **NPC AI**: roaming behaviour with patrol and idle states, plus
+      player-proximity triggers, driving both ambient world life and
+      quest encounters.
+    - >-
+      **Combat**: hit detection through PaperZD animation notifies, knockback,
+      invincibility frames and a health component shared by players and
+      enemies.
+    - >-
+      **HUD & UI**: health bars, interaction prompts and dialogue boxes as UMG
+      widgets, with a clean Blueprint/C++ split between logic and
+      presentation.
+  tags: [Unreal Engine 5, C++, PaperZD, Blueprints, UMG, DataTables]
+
+- title: Dungeon Adventure
+  status: Finished
+  engine: Unreal Engine 5.7
+  summary: >-
+    A finished 2D action game in C++ and PaperZD: fight waves of
+    skeletons and boars with a sword and a limited-use bow, and pick up hearts
+    to refill your heart-container health.
+  highlights:
+    - Enemy AI controller that finds and chases the player.
+    - Arrow projectiles, bow and heart pickups, and a wave counter in the HUD.
+  tags: [Unreal Engine 5, C++, PaperZD, UMG]
+  links:
+    - label: Code
+      url: https://github.com/rullo16/DungeonAdventure

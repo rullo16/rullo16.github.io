@@ -1,0 +1,30 @@
+groups:
+  - title: Programming languages
+    icon: code
+    items: [Python, C++, C#, Java, SQL]
+  - title: Machine learning & AI
+    icon: cpu
+    items: [PyTorch, TensorFlow, scikit-learn, Hugging Face, Gymnasium, PettingZoo, LangGraph, LlamaIndex, CrewAI, AutoGen, Weights & Biases, ONNX]
+  - title: Methods
+    icon: flask
+    items: [Multi-agent RL, PPO / MAPPO, SAC, CTDE, Curriculum learning, Intrinsic curiosity (ICM), Knowledge distillation, RAG, Knowledge graphs]
+  - title: Databases & knowledge systems
+    icon: database
+    items: [PostgreSQL, MySQL, Neo4j, Qdrant, SQLAlchemy]
+  - title: Backend frameworks
+    icon: server
+    items: [FastAPI, Flask, Spring]
+  - title: Game engines
+    icon: gamepad
+    items: [Unreal Engine 5, Unity, PyGame, PaperZD]
+  - title: Cloud & DevOps
+    icon: cloud
+    items: [Docker, Kubernetes, Git, Linux, AWS, GCP, Azure]
+
+languages:
+  - name: Italian
+    level: Native
+  - name: English
+    level: Fluent
+  - name: Japanese
+    level: Basic (JLPT N5)

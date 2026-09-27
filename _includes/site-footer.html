@@ -1,0 +1,21 @@
+<footer class="footer">
+  <div class="footer__inner container">
+    <div>
+      <p class="footer__name">Federico Rullo</p>
+      <p class="footer__meta">ML Research Engineer · Milan, Italy</p>
+    </div>
+    <ul class="social" aria-label="Contact and profiles">
+      {%- for link in site.data.social %}
+      <li>
+        <a class="social__link" href="{{ link.url }}"{% unless link.url contains 'mailto:' %} target="_blank" rel="noopener"{% endunless %}>
+          {% include icon.html name=link.icon %}<span>{{ link.name }}</span>
+        </a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  <div class="footer__base container">
+    <p>&copy; {{ site.time | date: '%Y' }} Federico Rullo. Last updated {{ site.time | date: '%B %Y' }}.</p>
+    <p>Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+  </div>
+</footer>
